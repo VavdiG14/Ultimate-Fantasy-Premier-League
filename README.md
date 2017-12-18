@@ -1,8 +1,8 @@
 # Ultimate-Fantasy-Premier-League
-Projekt pri Podatkovnih bazah 
+Projekt pri Podatkovnih bazah 1
 
-Projekt bo predstavljal namišljeno igro, v kateri si boš izbral 25 igralcev, ki ti bodo dali točke na podlagi realne igre v angelški 1. ligi. 
-Točke se bodo iz kroga v krog sešetvale, na koncu zmaga uporabnik z največ točkami.
+Projekt bo predstavljal namišljeno igro, v kateri si boš izbral 15 igralcev, ki ti bodo dali točke na podlagi realne igre v angleški 1. ligi (English Premier League).
+Točke se bodo iz kroga v krog seštevale, na koncu zmaga uporabnik z največ doseženimi točkami.
 
 Plan dela:
 
