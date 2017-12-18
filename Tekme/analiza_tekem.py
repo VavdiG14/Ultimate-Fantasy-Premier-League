@@ -3,16 +3,18 @@ from collections import Counter
 
 class Igralec():
 
-    def __init__(self, ime, minute=0, goli=0, asistence=0, rumeniKartoni=0, rdeciKartoni=0):
+    def __init__(self, ime, minute=0, goli=0, asistence=0, rumeniKartoni=0, rdeciKartoni=0,og = 0):
         self.ime = ime
         self.m = minute
         self.g = goli
         self.a = asistence
         self.rumeniK = rumeniKartoni
         self.rdeciK =rdeciKartoni
+        self.og = og
 
     def __repr__(self):
-        return 'Igralec(' + self.ime + ", " + str(self.m)+ ", " + str(self.g)+ ", " + str(self.a)+ ", " + str(self.rumeniK)+ ", " + str(self.rdeciK) +')'
+        return 'Igralec(' + self.ime + ", " + str(self.m)+ ", " + str(self.g)+ ", " + str(self.a)+ ", " +\
+               str(self.rumeniK)+ ", " + str(self.rdeciK) + ", " + str(self.og)+')'
 
 def steviloGolovAsistenc(string):
     '''Niz oblike: "Jesse Lingard 11', 63'", prebere igralca in določi številko golov. Vrne ime igralca in število golov.
@@ -26,9 +28,8 @@ def steviloGolovAsistenc(string):
     else:
         ime = sez[0] +' '+sez[1] + ' ' + sez[2]
     stej = string.count("'")
-    if  '(og)' in string:
-        stej = -1* stej
-    return (ime, stej)
+    stejog = string.count("(og)")
+    return (ime, stej-stejog, stejog )
 
 
 def izberiTekmo(stevilkaTekme = '22367'):
@@ -57,8 +58,8 @@ def izberiTekmo(stevilkaTekme = '22367'):
                     continue
                 elif vrsta == 'label.penalty.scored':
                     continue
-                if vrsta == 'Red Card':
-                    rdeciKarton.append(gol[-1])
+                if vrsta == 'Red Card' or vrsta == 'Second Yellow Card (Red Card)':
+                    rdeciKarton.append(steviloGolovAsistenc(gol[-1])[0])
                     gol = gol[:-1]
                 else:
                     gol.append(vrsta)
@@ -85,11 +86,20 @@ def vSlovar(gol,asistenca):
     goliD = gol[inde[0]+1:inde[1]]
     goliG = gol[inde[1]+1:]
     for j in goliD:
-        goli_klubD += int(steviloGolovAsistenc(j)[1])
-        strelciD[steviloGolovAsistenc(j)[0]] = steviloGolovAsistenc(j)[1]
+        trojka = steviloGolovAsistenc(j)
+        goli_klubD += int(trojka[1])
+        goli_klubD += int(trojka[2])
+        strelciD[trojka[0]] = (trojka[1],trojka[2])
     for l in goliG:
-        goli_klubG += steviloGolovAsistenc(l)[1]
-        strelciG[steviloGolovAsistenc(l)[0]] = steviloGolovAsistenc(l)[1]
+        trojka1 = steviloGolovAsistenc(l)
+        goli_klubG += int(trojka1[1])
+        goli_klubG += int(trojka1[2])
+        if trojka1[0] in list(strelciD.keys()):
+            t = strelciD[trojka1[0]]
+            r = (t[0]+trojka1[1] ,t[1] + trojka1[2])
+            strelciD[trojka1[0]] = r
+        else:
+            strelciG[trojka1[0]] = (trojka1[1],trojka1[2])
     for k in asistenca:
         podajalci[steviloGolovAsistenc(k)[0]] = steviloGolovAsistenc(k)[1]
     strelci = {**strelciD, **strelciG}
@@ -133,12 +143,13 @@ def vRazredIgralec(vhodna_datoteka, rumeni,strelci,podajalci,rdeciKarton):
                     minuta = 0
                 else:
                     se = seznam[1].split("'")
-                    minuta = 90 - int(se[0])
+                    minuta = abs(90 - eval(se[0]))
             else:
                 minuta = seznam[1][0:2]
             trenutniIgralec = Igralec(ime)
             if trenutniIgralec.ime in list(strelci.keys()):
-                trenutniIgralec.g = strelci[trenutniIgralec.ime]
+                trenutniIgralec.g = strelci[trenutniIgralec.ime][0]
+                trenutniIgralec.og = strelci[trenutniIgralec.ime][1]
             if trenutniIgralec.ime in list(podajalci.keys()):
                 trenutniIgralec.a = podajalci[trenutniIgralec.ime]
             if trenutniIgralec.ime in list(rumeni.keys()):
@@ -149,12 +160,28 @@ def vRazredIgralec(vhodna_datoteka, rumeni,strelci,podajalci,rdeciKarton):
             igralci.append(trenutniIgralec)
     return igralci
 
-for i in range(22342, 22351):
-    vhodna, gol, asistenca, rdeci = izberiTekmo(str(i))
-    strelci, podajalci, rezultat = vSlovar(gol, asistenca)
-    #rumeni = vSlovarKartoni(vhodna)
-    #igralci = vRazredIgralec(vhodna, rumeni, strelci, podajalci, rdeci)
 
-    #print(strelci, podajalci)
-    print(rezultat)
-#print(igralci)
+import sqlite3
+
+
+baza = "Premier_Leauge.db"
+
+for i in range(22342, 22351):
+    print(i)
+    vhodna, gol, asistenca, rdeci = izberiTekmo(str(22344))
+    krog = vhodna.split("_")[0]
+    strelci, podajalci, rezultat = vSlovar(gol, asistenca)
+    rumeni = vSlovarKartoni(vhodna)
+    igralci = vRazredIgralec(vhodna, rumeni, strelci, podajalci, rdeci)
+    print(igralci,rezultat)
+    break
+
+#for k in igralci:
+    #print(igralci, rezultat)
+        #with sqlite3.connect(baza) as con:
+            #cur = con.cursor()  # "odzivnik" za pregledovanje poizvedbe
+            #if k.g < 0:
+                #avtogol = -k.g
+                #k.g = 0
+            #a = cur.excecute("SELECT id_igralca FROM Igralci WHERE '{0}' == ime".format(k.ime))
+            #cur.execute("INSERT INTO  Dogodki VALUES ({0}, {1}, {2},{3},{4}, '{5}', 0)".format(i,j,krog, k.g,k.a, k.rumeniK,k.rdeciK)
