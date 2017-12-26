@@ -43,7 +43,7 @@ def tekma(stevilkaTekme):
             if st == 3:
                 print('-------POTEK TEKME--------',file=f)
             print(h.text.strip(),file=f)
-    return (krog, (naslov1+'.txt'))
+    return (krog, naslov1+'.txt')
 
 def minute(vhodna_datoteka):
     with open(vhodna_datoteka,'r') as g:
