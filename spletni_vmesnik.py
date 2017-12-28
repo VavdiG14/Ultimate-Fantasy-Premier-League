@@ -1,17 +1,21 @@
-import modeli
+import model
 from bottle import *
 
-# @get('/')
-# def glavniMenu():
-#     return template('glavni.html')
+@get('/')
+def glavniMenu():
+      return template('index.html')
+
+@get('/static/<filename:path>')
+def static(filename):
+    return static_file(filename, root='static')
+
+@get('/registriraj')
+def registriraj():
+    return template('registriraj.html')
 #
-# @get('/static/<filename:path>')
-# def static(filename):
-#     return static_file(filename, root='static')
-#
-# @get('/oseba/<emso>')
-#
-# @get('/isci')
+@get('/prijava')
+def prijava():
+    return template('prijava.html')
 #
 # @post('/dodaj')
 
