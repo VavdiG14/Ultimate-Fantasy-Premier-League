@@ -1,0 +1,120 @@
+<meta charset="UTF-8">
+<head>
+    <meta charset="utf-8">
+    <title>Registracija</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="/css/bootstrap.css" rel="stylesheet">
+    <link href="/css/bootstrap-responsive.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+	<link rel="stylesheet" , href="css/signup.css"/>
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le fav and touch icons -->
+    <!--<link rel="shortcut icon" href="/images/favicon.ico">
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/images/apple-touch-icon-114x114.png">-->
+  </head>
+  <body>
+
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="#">Ultimate Fantasy Premier League</a>
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li ><a> Prva stran</a> </li>
+              <li><a href="prijava">Prijava</a></li>
+              <li class="active"><a href="registracija">Registriraj</a></li>
+              <li><a href="contact">O projektu</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+<!-- If we will use bootstrap remove comment -->
+
+
+
+	<h2 class="page-header">Registracija</h2>
+	<div class="container-sign-up">
+		<form method="post" action="/register">
+
+			<div class="form-group">
+				<label for="email" class="cols-sm-2 control-label">Vaš email</label>
+				<div class="cols-sm-10">
+					<div class="input-group">
+						<span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
+						<input type="text" class="form-control" name="email" id="email" placeholder="Vpišite vaš email naslov"/>
+					</div>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label for="username" class="cols-sm-2 control-label">Uporabniško ime</label>
+				<div class="cols-sm-10">
+					<div class="input-group">
+						<span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
+						<input type="text" class="form-control" name="username" id="username"
+							   placeholder="Vpišite vaše uporabniško ime"/>
+					</div>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="team_name" class="cols-sm-2 control-label">Ime moštva</label>
+				<div class="cols-sm-10">
+					<div class="input-group">
+						<span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
+						<input type="text" class="form-control" name="team_name" id="team_name"
+							   placeholder="Vpišite željeno ime vaše ekipe"/>
+					</div>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label for="password" class="cols-sm-2 control-label">Geslo</label>
+				<div class="cols-sm-10">
+					<div class="input-group">
+						<span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+						<input type="password" class="form-control" name="password"
+							   pattern="(?=^.{6,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$"
+							   id="passwordSignUp1" title="At least one uppercase letter, one number and length of 6."
+							   placeholder="Vpišite geslo"/>
+						<span class="glyphicon form-control-feedback" id="passwordSpan1"></span>
+						<meter low="10" high="40" optimum="60" max="100" id="passValue"></meter>
+					</div>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label for="confirm" class="cols-sm-2 control-label">Potrditev gesla</label>
+				<div class="cols-sm-10">
+					<div class="input-group">
+						<span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+						<input type="password" class="form-control" name="password2"
+							   id="passwordSignUp2"
+							   placeholder="Ponovno vpišite geslo"/>
+						<span class="glyphicon form-control-feedback" id="passwordSpan2"></span>
+					</div>
+				</div>
+			</div>
+			<div class="text-center">
+				<button type="submit" class="btn btn-success">Registriraj</button>
+			</div>
+		</form>
+	</div>
+</body>

@@ -1,22 +1,44 @@
 import model
 from bottle import *
 
-@get('/')
+import os
+from bottle import route, run, static_file, template, view
+
+@route('/js/<filename>')
+def js_static(filename):
+    return static_file(filename, root='./js')
+
+@route('/img/<filename>')
+def img_static(filename):
+    return static_file(filename, root='./img')
+
+@route('/css/<filename>')
+def img_static(filename):
+    return static_file(filename, root='./css')
+
+@route("/")
+@view("index")
 def glavniMenu():
-      return template('index.html')
+    return dict(title="Hello", content="Hello from Python!")
 
-@get('/static/<filename:path>')
-def static(filename):
-    return static_file(filename, root='static')
 
-@get('/registriraj')
+
+
+@get('/registracija')
 def registriraj():
-    return template('registriraj.html')
+    return template('registracija.html')
 #
 @get('/prijava')
 def prijava():
     return template('prijava.html')
-#
+
+
+@get('/contact')
+def onaju():
+    return template('oprojektu.html')
+
+
+
 # @post('/dodaj')
 
 # poženemo strežnik na portu 8080, glej http://localhost:8080/
