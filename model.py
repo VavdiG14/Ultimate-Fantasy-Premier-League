@@ -136,4 +136,36 @@ def tockeTedna(krog1):
 
     return
 
+###REGISTRACIJA
 
+def preveriPristnost(username, email, team, password):
+    with sqlite3.connect(baza) as con:
+        cur = con.cursor()
+        cur.execute("SELECT uporabnisko_ime, geslo, email, ime_ekipe FROM Uporabnik WHERE uporabnisko_ime = '{0}'".format(username))
+        a = cur.fetchall()
+        if a == []:
+            return (True, "")
+        else:
+            return (False, 'Uporabniško ime že zasedeno')
+
+def shraniUporabnika(username, email, team, password):
+    with sqlite3.connect(baza) as con:
+        cur = con.cursor()
+        cur.execute("INSERT INTO Uporabnik VALUES('{0}', '{1}', '{2}', '{3}')".format(username, password, email, team))
+    return
+
+
+###PRIJAVA
+
+def preveriPrijavo(username,password):
+    with sqlite3.connect(baza) as con:
+        cur = con.cursor()
+        cur.execute("SELECT uporabnisko_ime,geslo FROM Uporabnik WHERE uporabnisko_ime = '{0}'".format(username))
+        a = cur.fetchall()
+        if a != []:
+            if a[0][1] == password:
+                return (True, "")
+            else:
+                return (False, "Geslo se ne ujema. Poskusi ponovno.")
+        else:
+            return (False, 'Uporabnik ni registriran')

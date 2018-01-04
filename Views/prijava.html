@@ -6,5 +6,45 @@
 </head>
 <body>
 
+	<h2 class="page-header">Prijava</h2>
+	<div class="container-sign-up">
+		<form method="post" action="/signup">
+
+
+			<div class="form-group">
+				<label for="username" class="cols-sm-2 control-label">Uporabniško ime</label>
+				<div class="cols-sm-10">
+					<div class="input-group">
+						<span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
+						<input type="text" class="form-control" name="username" id="username"
+							   placeholder="Vpišite vaše uporabniško ime"/>
+					</div>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label for="password" class="cols-sm-2 control-label">Geslo</label>
+				<div class="cols-sm-10">
+					<div class="input-group">
+						<span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+						<input type="password" class="form-control" name="password"
+							   pattern="(?=^.{6,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$"
+							   id="passwordSignUp1" title="At least one uppercase letter, one number and length of 6."
+							   placeholder="Vpišite geslo"/>
+						<span class="glyphicon form-control-feedback" id="passwordSpan1"></span>
+						<meter low="10" high="40" optimum="60" max="100" id="passValue"></meter>
+					</div>
+				</div>
+			</div>
+
+			<div class="text-center">
+				<button type="submit" class="btn btn-success">Prijava</button>
+			</div>
+		</form>
+		<div class="alert-warning">{{opozorilo}}</div>
+	</div>
+
+
+
 </body>
 </html>
