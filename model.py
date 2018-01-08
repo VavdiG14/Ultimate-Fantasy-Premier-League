@@ -4,6 +4,10 @@ import sqlite3
 
 baza = "Premier_Leauge.db"
 
+# con = sqlite.connet(baza)
+# cur = con.cursor()
+# cur.execute('PRAGMA foreign keys=ON')
+
 
 
 #TODO: uredi nekaj glede posodabljanja tabele Dogodki

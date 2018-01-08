@@ -19,7 +19,11 @@ def img_static(filename):
 @route("/")
 @view("index")
 def glavniMenu():
-    return dict(title="Hello", content="Hello from Python!")
+##    baza = "Premier_Leauge.db"
+##    con = sqlite.connect(baza)
+##    cur = con.cursor()
+##    tabela=cur.execute("SELECT * FROM Lestvica ORDER BY tocke DESC")
+    return dict(title="UFPL", content="Pozdravljeni na Ultimate Fantasy Premier League!")
 
 
 
@@ -73,4 +77,4 @@ def prijava():
         return template('prijava.html', opozorilo = preveriPrijavo(username, password)[1])
 
 # poženemo strežnik na portu 8080, glej http://localhost:8080/
-run(host='localhost', port=8080, reloader=True)
+run(host='localhost', port=8080)

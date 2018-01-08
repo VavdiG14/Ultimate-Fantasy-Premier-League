@@ -3,9 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <title>Prijava</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="/css/bootstrap.css" rel="stylesheet">
+    <link href="/css/bootstrap-responsive.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+	<link rel="stylesheet" , href="css/signup.css"/>
 </head>
 <body>
-
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="#">Ultimate Fantasy Premier League</a>
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li ><a href="/"> Prva stran</a> </li>
+              <li class="active"><a href="prijava">Prijava</a></li>
+              <li><a href="registracija">Registriraj</a></li>
+              <li><a href="contact">O projektu</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+	
 	<h2 class="page-header">Prijava</h2>
 	<div class="container-sign-up">
 		<form method="post" action="/signup">
@@ -31,8 +61,8 @@
 							   pattern="(?=^.{6,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$"
 							   id="passwordSignUp1" title="At least one uppercase letter, one number and length of 6."
 							   placeholder="Vpišite geslo"/>
-						<span class="glyphicon form-control-feedback" id="passwordSpan1"></span>
-						<meter low="10" high="40" optimum="60" max="100" id="passValue"></meter>
+					<!--	<span class="glyphicon form-control-feedback" id="passwordSpan1"></span>
+						<meter low="10" high="40" optimum="60" max="100" id="passValue"></meter> -->
 					</div>
 				</div>
 			</div>
