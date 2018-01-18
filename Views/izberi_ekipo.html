@@ -4,47 +4,71 @@
   <title>Bootstrap Example</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" , href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" , href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap.min.css">
+  <link rel="stylesheet", href = "/css/tabela.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js" ></script>
+  <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+
 </head>
 <body>
 
 <div class="container">
   <h2>Moja ekipa</h2>
   <p>Navodilo</p>
+  Sestavite ekipo 15 igralcev. Na voljo imate 100 denarnih enot, ekipa pa mora vsebovati 2 vratarja (GK),
+5 obrambnih igralcev (DEF), 5 veznih igralcev (MID) in 3 napadalce (FWD). Iz posamezne ekipe lahko izberemo
+največ 3 igralce!
    <p>Trenutna cena: </p>
-  <table class="table table-condensed">
-    <thead>
-      <tr>
-        <th>Igralec</th>
-        <th>Klub</th>
-        <th>Pozicija</th>
-        <th>Cena</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>John</td>
-        <td>Doe</td>
-        <td>john@example.com</td>
-        <td>5.4</td>
-      </tr>
-      <tr>
-        <td>Mary</td>
-        <td>Moe</td>
-        <td>mary@example.com</td>
-        <td>6</td>
-      </tr>
-      <tr>
-        <td>July</td>
-        <td>Dooley</td>
-        <td>july@example.com</td>
-        <td>10</td>
-      </tr>
-    </tbody>
-  </table>
 </div>
+<table id="example" class="table table-striped table-bordered" cellspacing="0" width="50%">
+  <thead>
+    <tr>
+      <th>Igralec</th>
+      <th>Pozicija</th>
+      <th>Klub</th>
+      <th>Cena</th>
+      <th>Označi</th>
+    </tr>
+  </thead>
+  <tbody>
+  %for ime, pozicija, klub, cena in rezultat:
+  <tr>
+    <td><a href="/{{ime}}"> {{ime}} </td>
+    <td>{{pozicija}}</td>
+    <td> {{klub}}</td>
+    <td> {{cena}}</td>
+    <td><input type="checkbox" class="checkbox"><label>Check ME!</label></td>
+  </tr>
+  %end
+  </tbody>
+</table>
+
+<table id="two" class="table table-striped table-bordered" cellspacing="0" width="50%">
+    <tbody>
+      <thead>
+        <tr>
+          <th>Igralec</th>
+          <th>Pozicija</th>
+          <th>Klub</th>
+          <th>Cena</th>
+          <th>Označi</th>
+        </tr>
+    </tbody>
+</table>
 
 </body>
+  <script>
+
+      $(document).ready(function() {
+    $('#example').DataTable();
+       } );
+
+$('#example tbody tr td input.checkbox:not(:checked)').on('change', function (e) {
+    var row = $(this).closest('tr').html();
+    debugger
+    $('#two tbody').append('<tr>'+row+'</tr>');
+});
+
+  </script>
 </html>

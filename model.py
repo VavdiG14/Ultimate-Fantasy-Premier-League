@@ -173,3 +173,9 @@ def preveriPrijavo(username,password):
                 return (False, "Geslo se ne ujema. Poskusi ponovno.")
         else:
             return (False, 'Uporabnik ni registriran')
+
+def pokaziIgralce():
+    with sqlite3.connect(baza) as con:
+        cur = con.cursor()
+        cur.execute("SELECT ime, pozicija, klub, cena FROM Igralci")
+        return cur.fetchall()

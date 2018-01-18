@@ -38,8 +38,7 @@ def prijava():
 
 @get('/izberi_ekipo')
 def izberiEkipo():
-
-    return template('izberi_ekipo.html')
+    return template('izberi_ekipo.html', rezultat= pokaziIgralce())
 
 
 @get('/contact')
