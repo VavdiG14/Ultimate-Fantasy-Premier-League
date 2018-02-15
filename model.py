@@ -179,3 +179,9 @@ def pokaziIgralce():
         cur = con.cursor()
         cur.execute("SELECT ime, pozicija, klub, cena FROM Igralci")
         return cur.fetchall()
+
+def lestvica():
+    with sqlite3.connect(baza) as con:
+        cur=con.cursor()
+        cur.execute("SELECT ime,tocke FROM Lestvica ORDER BY tocke DESC")
+        return cur.fetchall()
