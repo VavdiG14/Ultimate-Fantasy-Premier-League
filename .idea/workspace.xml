@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6dec1a27-50e7-40b8-b3f2-9d6749bee050" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/Premier_Leauge.db" afterPath="$PROJECT_DIR$/Premier_Leauge.db" />
       <change beforePath="$PROJECT_DIR$/Views/izberi_ekipo.html" afterPath="$PROJECT_DIR$/Views/izberi_ekipo.html" />
-      <change beforePath="$PROJECT_DIR$/css/signup.css" afterPath="$PROJECT_DIR$/css/signup.css" />
+      <change beforePath="$PROJECT_DIR$/Views/prijava.html" afterPath="$PROJECT_DIR$/Views/prijava.html" />
+      <change beforePath="$PROJECT_DIR$/app.py" afterPath="$PROJECT_DIR$/app.py" />
+      <change beforePath="$PROJECT_DIR$/model.py" afterPath="$PROJECT_DIR$/model.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,6 +21,7 @@
     <SUITE FILE_PATH="coverage/Ultimate_Fantasy_Premier_League$model.coverage" NAME="model Coverage Results" MODIFIED="1514375617710" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Ultimate_Fantasy_Premier_League$igralci__1_.coverage" NAME="igralci (1) Coverage Results" MODIFIED="1513590201194" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Ultimate_Fantasy_Premier_League$analiza_tekem.coverage" NAME="analiza_tekem Coverage Results" MODIFIED="1514231501056" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Tekme" />
+    <SUITE FILE_PATH="coverage/Ultimate_Fantasy_Premier_League$app.coverage" NAME="app Coverage Results" MODIFIED="1519235915710" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Ultimate_Fantasy_Premier_League$spletni_vmesnik.coverage" NAME="spletni_vmesnik Coverage Results" MODIFIED="1519223521067" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Ultimate_Fantasy_Premier_League$igralci.coverage" NAME="igralci Coverage Results" MODIFIED="1513509448326" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Ekipe" />
   </component>
@@ -40,105 +45,73 @@
             <state relative-caret-position="3043">
               <caret line="179" column="53" lean-forward="false" selection-start-line="179" selection-start-column="28" selection-end-line="179" selection-end-column="53" />
               <folding>
-                <marker date="1515657370847" expanded="true" signature="474:507" ph="SELECT * FRO... Tekma" />
-                <marker date="1515657370847" expanded="true" signature="897:942" ph="SELECT tocke... Lestvica" />
-                <marker date="1515657370847" expanded="true" signature="897:945" ph="SELECT tocke... Lestvica" />
-                <marker date="1515657370847" expanded="true" signature="897:946" ph="SELECT tocke... Lestvica" />
-                <marker date="1515657370847" expanded="true" signature="1025:1074" ph="SELECT tocke... Lestvica" />
-                <marker date="1515657370847" expanded="true" signature="1200:1246" ph="UPDATE Lestvica... " />
-                <marker date="1515657370847" expanded="true" signature="1200:1247" ph="UPDATE Lestvica... " />
-                <marker date="1515657370847" expanded="true" signature="1200:1248" ph="UPDATE Lestvica... " />
-                <marker date="1515657370847" expanded="true" signature="1200:1250" ph="UPDATE Lestvica... " />
-                <marker date="1515657370847" expanded="true" signature="1200:1252" ph="UPDATE Lestvica... " />
-                <marker date="1515657370847" expanded="true" signature="1347:1395" ph="UPDATE Lestvica... " />
-                <marker date="1515657370847" expanded="true" signature="1347:1396" ph="UPDATE Lestvica... " />
-                <marker date="1515657370847" expanded="true" signature="1347:1400" ph="UPDATE Lestvica... " />
-                <marker date="1515657370847" expanded="true" signature="4281:4472" ph="SELECT SELEC... " />
-                <marker date="1515657370847" expanded="true" signature="4281:4490" ph="SELECT id_ig... " />
-                <marker date="1515657370847" expanded="true" signature="4281:4557" ph="SELECT SELEC... " />
-                <marker date="1515657370847" expanded="true" signature="4281:4571" ph="SELECT * FRO... Dogodki" />
-                <marker date="1515657370847" expanded="true" signature="5101:5142" ph="INSERT INTO Tocke... " />
-                <marker date="1515657370847" expanded="true" signature="5112:5135" ph="UPDATE Tocke... " />
-                <marker date="1515657370847" expanded="true" signature="5112:5141" ph="UPDATE Tocke... " />
-                <marker date="1515657370847" expanded="true" signature="5351:5413" ph="SELECT upora... Uporabnik" />
-                <marker date="1515657370847" expanded="true" signature="5351:5443" ph="SELECT upora... Uporabnik" />
-                <marker date="1515657370847" expanded="true" signature="5351:5462" ph="SELECT upora... Uporabnik" />
-                <marker date="1515657370847" expanded="true" signature="5755:5811" ph="INSERT INTO Uporabnik... " />
-                <marker date="1515657370847" expanded="true" signature="6005:6078" ph="SELECT upora... Uporabnik" />
-                <marker date="1515657370847" expanded="true" signature="6481:6526" ph="SELECT ime, Igralci" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="spletni_vmesnik.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/spletni_vmesnik.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="368">
-              <caret line="38" column="19" lean-forward="false" selection-start-line="38" selection-start-column="7" selection-end-line="38" selection-end-column="19" />
-              <folding>
-                <element signature="e#0#19#0" expanded="true" />
-                <marker date="1515657370826" expanded="true" signature="453:454" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="izberi_ekipo.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Views/izberi_ekipo.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-153">
-              <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="7" selection-end-column="99" />
-              <folding>
-                <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <marker date="1519235566139" expanded="true" signature="474:507" ph="SELECT * FRO... Tekma" />
+                <marker date="1519235566139" expanded="true" signature="897:942" ph="SELECT tocke... Lestvica" />
+                <marker date="1519235566139" expanded="true" signature="897:945" ph="SELECT tocke... Lestvica" />
+                <marker date="1519235566139" expanded="true" signature="897:946" ph="SELECT tocke... Lestvica" />
+                <marker date="1519235566139" expanded="true" signature="1025:1074" ph="SELECT tocke... Lestvica" />
+                <marker date="1519235566139" expanded="true" signature="1200:1246" ph="UPDATE Lestvica... " />
+                <marker date="1519235566139" expanded="true" signature="1200:1247" ph="UPDATE Lestvica... " />
+                <marker date="1519235566139" expanded="true" signature="1200:1248" ph="UPDATE Lestvica... " />
+                <marker date="1519235566139" expanded="true" signature="1200:1250" ph="UPDATE Lestvica... " />
+                <marker date="1519235566139" expanded="true" signature="1200:1252" ph="UPDATE Lestvica... " />
+                <marker date="1519235566139" expanded="true" signature="1347:1395" ph="UPDATE Lestvica... " />
+                <marker date="1519235566139" expanded="true" signature="1347:1396" ph="UPDATE Lestvica... " />
+                <marker date="1519235566139" expanded="true" signature="1347:1400" ph="UPDATE Lestvica... " />
+                <marker date="1519235566139" expanded="true" signature="4281:4472" ph="SELECT SELEC... " />
+                <marker date="1519235566139" expanded="true" signature="4281:4490" ph="SELECT id_ig... " />
+                <marker date="1519235566139" expanded="true" signature="4281:4557" ph="SELECT SELEC... " />
+                <marker date="1519235566139" expanded="true" signature="4281:4571" ph="SELECT * FRO... Dogodki" />
+                <marker date="1519235566139" expanded="true" signature="5101:5142" ph="INSERT INTO Tocke... " />
+                <marker date="1519235566139" expanded="true" signature="5112:5135" ph="UPDATE Tocke... " />
+                <marker date="1519235566139" expanded="true" signature="5112:5141" ph="UPDATE Tocke... " />
+                <marker date="1519235566139" expanded="true" signature="5351:5413" ph="SELECT upora... Uporabnik" />
+                <marker date="1519235566139" expanded="true" signature="5351:5443" ph="SELECT upora... Uporabnik" />
+                <marker date="1519235566139" expanded="true" signature="5351:5462" ph="SELECT upora... Uporabnik" />
+                <marker date="1519235566139" expanded="true" signature="5755:5811" ph="INSERT INTO Uporabnik... " />
+                <marker date="1519235566139" expanded="true" signature="6005:6078" ph="SELECT upora... Uporabnik" />
+                <marker date="1519235566139" expanded="true" signature="6481:6526" ph="SELECT ime, Igralci" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="registracija.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Views/registracija.html">
+        <entry file="file://$PROJECT_DIR$/views/registracija.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="54" column="47" lean-forward="false" selection-start-line="54" selection-start-column="4" selection-end-line="54" selection-end-column="47" />
+            <state relative-caret-position="850">
+              <caret line="50" column="25" lean-forward="false" selection-start-line="50" selection-start-column="25" selection-end-line="50" selection-end-column="25" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="prijava.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Views/prijava.html">
+        <entry file="file://$PROJECT_DIR$/views/prijava.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="564">
-              <caret line="76" column="0" lean-forward="false" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
+            <state relative-caret-position="221">
+              <caret line="13" column="36" lean-forward="true" selection-start-line="13" selection-start-column="36" selection-end-line="13" selection-end-column="36" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Views/index.html">
+        <entry file="file://$PROJECT_DIR$/views/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="816">
-              <caret line="48" column="32" lean-forward="false" selection-start-line="48" selection-start-column="32" selection-end-line="48" selection-end-column="32" />
+            <state relative-caret-position="1581">
+              <caret line="93" column="32" lean-forward="false" selection-start-line="93" selection-start-column="32" selection-end-line="93" selection-end-column="32" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="signup.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/css/signup.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="143412">
-              <caret line="8436" column="50" lean-forward="false" selection-start-line="8436" selection-start-column="50" selection-end-line="8436" selection-end-column="50" />
-              <folding>
-                <element signature="e#17141#21448#1" expanded="true" />
-                <element signature="e#24380#24678#2" expanded="true" />
-                <element signature="e#24776#25141#2" expanded="true" />
-                <element signature="e#25240#25609#2" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -193,6 +166,7 @@
         <option value="$PROJECT_DIR$/Views/inde.html" />
         <option value="$PROJECT_DIR$/spletni_vmesnik.py" />
         <option value="$PROJECT_DIR$/Views/izberi_ekipo.html" />
+        <option value="$PROJECT_DIR$/views/prijava.html" />
       </list>
     </option>
   </component>
@@ -202,7 +176,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="952" />
     <option name="width" value="976" />
     <option name="height" value="1088" />
@@ -222,7 +196,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -234,17 +207,13 @@
             <path>
               <item name="Ultimate-Fantasy-Premier-League" type="b2602c69:ProjectViewProjectNode" />
               <item name="Ultimate-Fantasy-Premier-League" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Ultimate-Fantasy-Premier-League" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Ultimate-Fantasy-Premier-League" type="462c0819:PsiDirectoryNode" />
-              <item name="Views" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -252,7 +221,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Ultimate - Fantasy" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -275,7 +244,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.spletni_vmesnik">
+  <component name="RunManager" selected="Python.app">
     <configuration name="analiza_tekem" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -295,7 +264,7 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="igralci (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="app" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -308,7 +277,7 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Ultimate-Fantasy-Premier-League" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/igralci.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/app.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -520,18 +489,18 @@
     </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Python.analiza_tekem" />
-      <item index="1" class="java.lang.String" itemvalue="Python.igralci (1)" />
-      <item index="2" class="java.lang.String" itemvalue="Python.model" />
-      <item index="3" class="java.lang.String" itemvalue="Python.spletni_vmesnik" />
-      <item index="4" class="java.lang.String" itemvalue="Python tests.Doctests in bottle" />
+      <item index="1" class="java.lang.String" itemvalue="Python.model" />
+      <item index="2" class="java.lang.String" itemvalue="Python.spletni_vmesnik" />
+      <item index="3" class="java.lang.String" itemvalue="Python tests.Doctests in bottle" />
+      <item index="4" class="java.lang.String" itemvalue="Python.app" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.spletni_vmesnik" />
-        <item index="1" class="java.lang.String" itemvalue="Python tests.Doctests in bottle" />
-        <item index="2" class="java.lang.String" itemvalue="Python.model" />
-        <item index="3" class="java.lang.String" itemvalue="Python.analiza_tekem" />
-        <item index="4" class="java.lang.String" itemvalue="Python.igralci (1)" />
+        <item index="0" class="java.lang.String" itemvalue="Python.app" />
+        <item index="1" class="java.lang.String" itemvalue="Python.spletni_vmesnik" />
+        <item index="2" class="java.lang.String" itemvalue="Python tests.Doctests in bottle" />
+        <item index="3" class="java.lang.String" itemvalue="Python.model" />
+        <item index="4" class="java.lang.String" itemvalue="Python.analiza_tekem" />
       </list>
     </recent_temporary>
   </component>
@@ -569,7 +538,8 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1096" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32901832" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -577,12 +547,11 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32901832" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32901832" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1401919" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14179105" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32975295" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32947233" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Concurrent Activities Diagram" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32708332" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39791667" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -592,6 +561,7 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32901832" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Concurrent Activities Diagram" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32708332" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -614,13 +584,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Tekme/pregledTekem.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Tekme/analiza_tekem.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2877">
@@ -628,48 +591,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spletni_vmesnik.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="2" lean-forward="false" selection-start-line="0" selection-start-column="2" selection-end-line="0" selection-end-column="2" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-            <marker date="1515657370826" expanded="true" signature="453:454" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/spletni_vmesnik.py" />
     <entry file="file://$PROJECT_DIR$/model.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="483">
           <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
           <folding>
-            <marker date="1515657370847" expanded="true" signature="474:507" ph="SELECT * FRO... Tekma" />
-            <marker date="1515657370847" expanded="true" signature="897:942" ph="SELECT tocke... Lestvica" />
-            <marker date="1515657370847" expanded="true" signature="897:945" ph="SELECT tocke... Lestvica" />
-            <marker date="1515657370847" expanded="true" signature="897:946" ph="SELECT tocke... Lestvica" />
-            <marker date="1515657370847" expanded="true" signature="1025:1074" ph="SELECT tocke... Lestvica" />
-            <marker date="1515657370847" expanded="true" signature="1200:1246" ph="UPDATE Lestvica... " />
-            <marker date="1515657370847" expanded="true" signature="1200:1247" ph="UPDATE Lestvica... " />
-            <marker date="1515657370847" expanded="true" signature="1200:1248" ph="UPDATE Lestvica... " />
-            <marker date="1515657370847" expanded="true" signature="1200:1250" ph="UPDATE Lestvica... " />
-            <marker date="1515657370847" expanded="true" signature="1200:1252" ph="UPDATE Lestvica... " />
-            <marker date="1515657370847" expanded="true" signature="1347:1395" ph="UPDATE Lestvica... " />
-            <marker date="1515657370847" expanded="true" signature="1347:1396" ph="UPDATE Lestvica... " />
-            <marker date="1515657370847" expanded="true" signature="1347:1400" ph="UPDATE Lestvica... " />
-            <marker date="1515657370847" expanded="true" signature="4281:4472" ph="SELECT SELEC... " />
-            <marker date="1515657370847" expanded="true" signature="4281:4490" ph="SELECT id_ig... " />
-            <marker date="1515657370847" expanded="true" signature="4281:4557" ph="SELECT SELEC... " />
-            <marker date="1515657370847" expanded="true" signature="4281:4571" ph="SELECT * FRO... Dogodki" />
-            <marker date="1515657370847" expanded="true" signature="5101:5142" ph="INSERT INTO Tocke... " />
-            <marker date="1515657370847" expanded="true" signature="5112:5135" ph="UPDATE Tocke... " />
-            <marker date="1515657370847" expanded="true" signature="5112:5141" ph="UPDATE Tocke... " />
-            <marker date="1515657370847" expanded="true" signature="5351:5413" ph="SELECT upora... Uporabnik" />
-            <marker date="1515657370847" expanded="true" signature="5351:5443" ph="SELECT upora... Uporabnik" />
-            <marker date="1515657370847" expanded="true" signature="5351:5462" ph="SELECT upora... Uporabnik" />
-            <marker date="1515657370847" expanded="true" signature="5755:5811" ph="INSERT INTO Uporabnik... " />
-            <marker date="1515657370847" expanded="true" signature="6005:6078" ph="SELECT upora... Uporabnik" />
-            <marker date="1515657370847" expanded="true" signature="6481:6526" ph="SELECT ime, Igralci" />
+            <marker date="1519235566139" expanded="true" signature="474:507" ph="SELECT * FRO... Tekma" />
+            <marker date="1519235566139" expanded="true" signature="897:942" ph="SELECT tocke... Lestvica" />
+            <marker date="1519235566139" expanded="true" signature="897:945" ph="SELECT tocke... Lestvica" />
+            <marker date="1519235566139" expanded="true" signature="897:946" ph="SELECT tocke... Lestvica" />
+            <marker date="1519235566139" expanded="true" signature="1025:1074" ph="SELECT tocke... Lestvica" />
+            <marker date="1519235566139" expanded="true" signature="1200:1246" ph="UPDATE Lestvica... " />
+            <marker date="1519235566139" expanded="true" signature="1200:1247" ph="UPDATE Lestvica... " />
+            <marker date="1519235566139" expanded="true" signature="1200:1248" ph="UPDATE Lestvica... " />
+            <marker date="1519235566139" expanded="true" signature="1200:1250" ph="UPDATE Lestvica... " />
+            <marker date="1519235566139" expanded="true" signature="1200:1252" ph="UPDATE Lestvica... " />
+            <marker date="1519235566139" expanded="true" signature="1347:1395" ph="UPDATE Lestvica... " />
+            <marker date="1519235566139" expanded="true" signature="1347:1396" ph="UPDATE Lestvica... " />
+            <marker date="1519235566139" expanded="true" signature="1347:1400" ph="UPDATE Lestvica... " />
+            <marker date="1519235566139" expanded="true" signature="4281:4472" ph="SELECT SELEC... " />
+            <marker date="1519235566139" expanded="true" signature="4281:4490" ph="SELECT id_ig... " />
+            <marker date="1519235566139" expanded="true" signature="4281:4557" ph="SELECT SELEC... " />
+            <marker date="1519235566139" expanded="true" signature="4281:4571" ph="SELECT * FRO... Dogodki" />
+            <marker date="1519235566139" expanded="true" signature="5101:5142" ph="INSERT INTO Tocke... " />
+            <marker date="1519235566139" expanded="true" signature="5112:5135" ph="UPDATE Tocke... " />
+            <marker date="1519235566139" expanded="true" signature="5112:5141" ph="UPDATE Tocke... " />
+            <marker date="1519235566139" expanded="true" signature="5351:5413" ph="SELECT upora... Uporabnik" />
+            <marker date="1519235566139" expanded="true" signature="5351:5443" ph="SELECT upora... Uporabnik" />
+            <marker date="1519235566139" expanded="true" signature="5351:5462" ph="SELECT upora... Uporabnik" />
+            <marker date="1519235566139" expanded="true" signature="5755:5811" ph="INSERT INTO Uporabnik... " />
+            <marker date="1519235566139" expanded="true" signature="6005:6078" ph="SELECT upora... Uporabnik" />
+            <marker date="1519235566139" expanded="true" signature="6481:6526" ph="SELECT ime, Igralci" />
           </folding>
         </state>
       </provider>
@@ -688,94 +641,74 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spletni_vmesnik.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="2" lean-forward="false" selection-start-line="0" selection-start-column="2" selection-end-line="0" selection-end-column="2" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-            <marker date="1515657370826" expanded="true" signature="453:454" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/spletni_vmesnik.py" />
     <entry file="file://$PROJECT_DIR$/model.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="483">
           <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
           <folding>
-            <marker date="1515657370847" expanded="true" signature="474:507" ph="SELECT * FRO... Tekma" />
-            <marker date="1515657370847" expanded="true" signature="897:942" ph="SELECT tocke... Lestvica" />
-            <marker date="1515657370847" expanded="true" signature="897:945" ph="SELECT tocke... Lestvica" />
-            <marker date="1515657370847" expanded="true" signature="897:946" ph="SELECT tocke... Lestvica" />
-            <marker date="1515657370847" expanded="true" signature="1025:1074" ph="SELECT tocke... Lestvica" />
-            <marker date="1515657370847" expanded="true" signature="1200:1246" ph="UPDATE Lestvica... " />
-            <marker date="1515657370847" expanded="true" signature="1200:1247" ph="UPDATE Lestvica... " />
-            <marker date="1515657370847" expanded="true" signature="1200:1248" ph="UPDATE Lestvica... " />
-            <marker date="1515657370847" expanded="true" signature="1200:1250" ph="UPDATE Lestvica... " />
-            <marker date="1515657370847" expanded="true" signature="1200:1252" ph="UPDATE Lestvica... " />
-            <marker date="1515657370847" expanded="true" signature="1347:1395" ph="UPDATE Lestvica... " />
-            <marker date="1515657370847" expanded="true" signature="1347:1396" ph="UPDATE Lestvica... " />
-            <marker date="1515657370847" expanded="true" signature="1347:1400" ph="UPDATE Lestvica... " />
-            <marker date="1515657370847" expanded="true" signature="4281:4472" ph="SELECT SELEC... " />
-            <marker date="1515657370847" expanded="true" signature="4281:4490" ph="SELECT id_ig... " />
-            <marker date="1515657370847" expanded="true" signature="4281:4557" ph="SELECT SELEC... " />
-            <marker date="1515657370847" expanded="true" signature="4281:4571" ph="SELECT * FRO... Dogodki" />
-            <marker date="1515657370847" expanded="true" signature="5101:5142" ph="INSERT INTO Tocke... " />
-            <marker date="1515657370847" expanded="true" signature="5112:5135" ph="UPDATE Tocke... " />
-            <marker date="1515657370847" expanded="true" signature="5112:5141" ph="UPDATE Tocke... " />
-            <marker date="1515657370847" expanded="true" signature="5351:5413" ph="SELECT upora... Uporabnik" />
-            <marker date="1515657370847" expanded="true" signature="5351:5443" ph="SELECT upora... Uporabnik" />
-            <marker date="1515657370847" expanded="true" signature="5351:5462" ph="SELECT upora... Uporabnik" />
-            <marker date="1515657370847" expanded="true" signature="5755:5811" ph="INSERT INTO Uporabnik... " />
-            <marker date="1515657370847" expanded="true" signature="6005:6078" ph="SELECT upora... Uporabnik" />
-            <marker date="1515657370847" expanded="true" signature="6481:6526" ph="SELECT ime, Igralci" />
+            <marker date="1519235566139" expanded="true" signature="474:507" ph="SELECT * FRO... Tekma" />
+            <marker date="1519235566139" expanded="true" signature="897:942" ph="SELECT tocke... Lestvica" />
+            <marker date="1519235566139" expanded="true" signature="897:945" ph="SELECT tocke... Lestvica" />
+            <marker date="1519235566139" expanded="true" signature="897:946" ph="SELECT tocke... Lestvica" />
+            <marker date="1519235566139" expanded="true" signature="1025:1074" ph="SELECT tocke... Lestvica" />
+            <marker date="1519235566139" expanded="true" signature="1200:1246" ph="UPDATE Lestvica... " />
+            <marker date="1519235566139" expanded="true" signature="1200:1247" ph="UPDATE Lestvica... " />
+            <marker date="1519235566139" expanded="true" signature="1200:1248" ph="UPDATE Lestvica... " />
+            <marker date="1519235566139" expanded="true" signature="1200:1250" ph="UPDATE Lestvica... " />
+            <marker date="1519235566139" expanded="true" signature="1200:1252" ph="UPDATE Lestvica... " />
+            <marker date="1519235566139" expanded="true" signature="1347:1395" ph="UPDATE Lestvica... " />
+            <marker date="1519235566139" expanded="true" signature="1347:1396" ph="UPDATE Lestvica... " />
+            <marker date="1519235566139" expanded="true" signature="1347:1400" ph="UPDATE Lestvica... " />
+            <marker date="1519235566139" expanded="true" signature="4281:4472" ph="SELECT SELEC... " />
+            <marker date="1519235566139" expanded="true" signature="4281:4490" ph="SELECT id_ig... " />
+            <marker date="1519235566139" expanded="true" signature="4281:4557" ph="SELECT SELEC... " />
+            <marker date="1519235566139" expanded="true" signature="4281:4571" ph="SELECT * FRO... Dogodki" />
+            <marker date="1519235566139" expanded="true" signature="5101:5142" ph="INSERT INTO Tocke... " />
+            <marker date="1519235566139" expanded="true" signature="5112:5135" ph="UPDATE Tocke... " />
+            <marker date="1519235566139" expanded="true" signature="5112:5141" ph="UPDATE Tocke... " />
+            <marker date="1519235566139" expanded="true" signature="5351:5413" ph="SELECT upora... Uporabnik" />
+            <marker date="1519235566139" expanded="true" signature="5351:5443" ph="SELECT upora... Uporabnik" />
+            <marker date="1519235566139" expanded="true" signature="5351:5462" ph="SELECT upora... Uporabnik" />
+            <marker date="1519235566139" expanded="true" signature="5755:5811" ph="INSERT INTO Uporabnik... " />
+            <marker date="1519235566139" expanded="true" signature="6005:6078" ph="SELECT upora... Uporabnik" />
+            <marker date="1519235566139" expanded="true" signature="6481:6526" ph="SELECT ime, Igralci" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spletni_vmesnik.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="2" lean-forward="false" selection-start-line="0" selection-start-column="2" selection-end-line="0" selection-end-column="2" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-            <marker date="1515657370826" expanded="true" signature="453:454" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/spletni_vmesnik.py" />
     <entry file="file://$PROJECT_DIR$/model.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
           <caret line="20" column="9" lean-forward="true" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
           <folding>
-            <marker date="1515657370847" expanded="true" signature="474:507" ph="SELECT * FRO... Tekma" />
-            <marker date="1515657370847" expanded="true" signature="897:942" ph="SELECT tocke... Lestvica" />
-            <marker date="1515657370847" expanded="true" signature="897:945" ph="SELECT tocke... Lestvica" />
-            <marker date="1515657370847" expanded="true" signature="897:946" ph="SELECT tocke... Lestvica" />
-            <marker date="1515657370847" expanded="true" signature="1025:1074" ph="SELECT tocke... Lestvica" />
-            <marker date="1515657370847" expanded="true" signature="1200:1246" ph="UPDATE Lestvica... " />
-            <marker date="1515657370847" expanded="true" signature="1200:1247" ph="UPDATE Lestvica... " />
-            <marker date="1515657370847" expanded="true" signature="1200:1248" ph="UPDATE Lestvica... " />
-            <marker date="1515657370847" expanded="true" signature="1200:1250" ph="UPDATE Lestvica... " />
-            <marker date="1515657370847" expanded="true" signature="1200:1252" ph="UPDATE Lestvica... " />
-            <marker date="1515657370847" expanded="true" signature="1347:1395" ph="UPDATE Lestvica... " />
-            <marker date="1515657370847" expanded="true" signature="1347:1396" ph="UPDATE Lestvica... " />
-            <marker date="1515657370847" expanded="true" signature="1347:1400" ph="UPDATE Lestvica... " />
-            <marker date="1515657370847" expanded="true" signature="4281:4472" ph="SELECT SELEC... " />
-            <marker date="1515657370847" expanded="true" signature="4281:4490" ph="SELECT id_ig... " />
-            <marker date="1515657370847" expanded="true" signature="4281:4557" ph="SELECT SELEC... " />
-            <marker date="1515657370847" expanded="true" signature="4281:4571" ph="SELECT * FRO... Dogodki" />
-            <marker date="1515657370847" expanded="true" signature="5101:5142" ph="INSERT INTO Tocke... " />
-            <marker date="1515657370847" expanded="true" signature="5112:5135" ph="UPDATE Tocke... " />
-            <marker date="1515657370847" expanded="true" signature="5112:5141" ph="UPDATE Tocke... " />
-            <marker date="1515657370847" expanded="true" signature="5351:5413" ph="SELECT upora... Uporabnik" />
-            <marker date="1515657370847" expanded="true" signature="5351:5443" ph="SELECT upora... Uporabnik" />
-            <marker date="1515657370847" expanded="true" signature="5351:5462" ph="SELECT upora... Uporabnik" />
-            <marker date="1515657370847" expanded="true" signature="5755:5811" ph="INSERT INTO Uporabnik... " />
-            <marker date="1515657370847" expanded="true" signature="6005:6078" ph="SELECT upora... Uporabnik" />
-            <marker date="1515657370847" expanded="true" signature="6481:6526" ph="SELECT ime, Igralci" />
+            <marker date="1519235566139" expanded="true" signature="474:507" ph="SELECT * FRO... Tekma" />
+            <marker date="1519235566139" expanded="true" signature="897:942" ph="SELECT tocke... Lestvica" />
+            <marker date="1519235566139" expanded="true" signature="897:945" ph="SELECT tocke... Lestvica" />
+            <marker date="1519235566139" expanded="true" signature="897:946" ph="SELECT tocke... Lestvica" />
+            <marker date="1519235566139" expanded="true" signature="1025:1074" ph="SELECT tocke... Lestvica" />
+            <marker date="1519235566139" expanded="true" signature="1200:1246" ph="UPDATE Lestvica... " />
+            <marker date="1519235566139" expanded="true" signature="1200:1247" ph="UPDATE Lestvica... " />
+            <marker date="1519235566139" expanded="true" signature="1200:1248" ph="UPDATE Lestvica... " />
+            <marker date="1519235566139" expanded="true" signature="1200:1250" ph="UPDATE Lestvica... " />
+            <marker date="1519235566139" expanded="true" signature="1200:1252" ph="UPDATE Lestvica... " />
+            <marker date="1519235566139" expanded="true" signature="1347:1395" ph="UPDATE Lestvica... " />
+            <marker date="1519235566139" expanded="true" signature="1347:1396" ph="UPDATE Lestvica... " />
+            <marker date="1519235566139" expanded="true" signature="1347:1400" ph="UPDATE Lestvica... " />
+            <marker date="1519235566139" expanded="true" signature="4281:4472" ph="SELECT SELEC... " />
+            <marker date="1519235566139" expanded="true" signature="4281:4490" ph="SELECT id_ig... " />
+            <marker date="1519235566139" expanded="true" signature="4281:4557" ph="SELECT SELEC... " />
+            <marker date="1519235566139" expanded="true" signature="4281:4571" ph="SELECT * FRO... Dogodki" />
+            <marker date="1519235566139" expanded="true" signature="5101:5142" ph="INSERT INTO Tocke... " />
+            <marker date="1519235566139" expanded="true" signature="5112:5135" ph="UPDATE Tocke... " />
+            <marker date="1519235566139" expanded="true" signature="5112:5141" ph="UPDATE Tocke... " />
+            <marker date="1519235566139" expanded="true" signature="5351:5413" ph="SELECT upora... Uporabnik" />
+            <marker date="1519235566139" expanded="true" signature="5351:5443" ph="SELECT upora... Uporabnik" />
+            <marker date="1519235566139" expanded="true" signature="5351:5462" ph="SELECT upora... Uporabnik" />
+            <marker date="1519235566139" expanded="true" signature="5755:5811" ph="INSERT INTO Uporabnik... " />
+            <marker date="1519235566139" expanded="true" signature="6005:6078" ph="SELECT upora... Uporabnik" />
+            <marker date="1519235566139" expanded="true" signature="6481:6526" ph="SELECT ime, Igralci" />
           </folding>
         </state>
       </provider>
@@ -910,66 +843,17 @@
     <entry file="file://$PROJECT_DIR$/static/css/style.css" />
     <entry file="file://$PROJECT_DIR$/css/sign_up.css" />
     <entry file="file://$PROJECT_DIR$/js/sign_up.js" />
-    <entry file="file://$PROJECT_DIR$/css/docs.css">
+    <entry file="file://$PROJECT_DIR$/css/docs.css" />
+    <entry file="file://$PROJECT_DIR$/css/bootstrap-responsive.css" />
+    <entry file="file://$PROJECT_DIR$/css/bootstrap.css" />
+    <entry file="file://$PROJECT_DIR$/views/oprojektu.html" />
+    <entry file="file://$PROJECT_DIR$/css/tabela.css" />
+    <entry file="file://$PROJECT_DIR$/css/signup.css" />
+    <entry file="file://$PROJECT_DIR$/views/inde.html" />
+    <entry file="file://$PROJECT_DIR$/views/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/bootstrap-responsive.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="305" column="16" lean-forward="false" selection-start-line="305" selection-start-column="11" selection-end-line="305" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/bootstrap.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Views/oprojektu.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="48" column="38" lean-forward="false" selection-start-line="48" selection-start-column="38" selection-end-line="48" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/tabela.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/signup.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="143412">
-          <caret line="8436" column="50" lean-forward="false" selection-start-line="8436" selection-start-column="50" selection-end-line="8436" selection-end-column="50" />
-          <folding>
-            <element signature="e#17141#21448#1" expanded="true" />
-            <element signature="e#24380#24678#2" expanded="true" />
-            <element signature="e#24776#25141#2" expanded="true" />
-            <element signature="e#25240#25609#2" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Views/inde.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Views/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="816">
-          <caret line="48" column="32" lean-forward="false" selection-start-line="48" selection-start-column="32" selection-end-line="48" selection-end-column="32" />
+        <state relative-caret-position="1581">
+          <caret line="93" column="32" lean-forward="false" selection-start-line="93" selection-start-column="32" selection-end-line="93" selection-end-column="32" />
           <folding />
         </state>
       </provider>
@@ -979,71 +863,58 @@
         <state relative-caret-position="3043">
           <caret line="179" column="53" lean-forward="false" selection-start-line="179" selection-start-column="28" selection-end-line="179" selection-end-column="53" />
           <folding>
-            <marker date="1515657370847" expanded="true" signature="474:507" ph="SELECT * FRO... Tekma" />
-            <marker date="1515657370847" expanded="true" signature="897:942" ph="SELECT tocke... Lestvica" />
-            <marker date="1515657370847" expanded="true" signature="897:945" ph="SELECT tocke... Lestvica" />
-            <marker date="1515657370847" expanded="true" signature="897:946" ph="SELECT tocke... Lestvica" />
-            <marker date="1515657370847" expanded="true" signature="1025:1074" ph="SELECT tocke... Lestvica" />
-            <marker date="1515657370847" expanded="true" signature="1200:1246" ph="UPDATE Lestvica... " />
-            <marker date="1515657370847" expanded="true" signature="1200:1247" ph="UPDATE Lestvica... " />
-            <marker date="1515657370847" expanded="true" signature="1200:1248" ph="UPDATE Lestvica... " />
-            <marker date="1515657370847" expanded="true" signature="1200:1250" ph="UPDATE Lestvica... " />
-            <marker date="1515657370847" expanded="true" signature="1200:1252" ph="UPDATE Lestvica... " />
-            <marker date="1515657370847" expanded="true" signature="1347:1395" ph="UPDATE Lestvica... " />
-            <marker date="1515657370847" expanded="true" signature="1347:1396" ph="UPDATE Lestvica... " />
-            <marker date="1515657370847" expanded="true" signature="1347:1400" ph="UPDATE Lestvica... " />
-            <marker date="1515657370847" expanded="true" signature="4281:4472" ph="SELECT SELEC... " />
-            <marker date="1515657370847" expanded="true" signature="4281:4490" ph="SELECT id_ig... " />
-            <marker date="1515657370847" expanded="true" signature="4281:4557" ph="SELECT SELEC... " />
-            <marker date="1515657370847" expanded="true" signature="4281:4571" ph="SELECT * FRO... Dogodki" />
-            <marker date="1515657370847" expanded="true" signature="5101:5142" ph="INSERT INTO Tocke... " />
-            <marker date="1515657370847" expanded="true" signature="5112:5135" ph="UPDATE Tocke... " />
-            <marker date="1515657370847" expanded="true" signature="5112:5141" ph="UPDATE Tocke... " />
-            <marker date="1515657370847" expanded="true" signature="5351:5413" ph="SELECT upora... Uporabnik" />
-            <marker date="1515657370847" expanded="true" signature="5351:5443" ph="SELECT upora... Uporabnik" />
-            <marker date="1515657370847" expanded="true" signature="5351:5462" ph="SELECT upora... Uporabnik" />
-            <marker date="1515657370847" expanded="true" signature="5755:5811" ph="INSERT INTO Uporabnik... " />
-            <marker date="1515657370847" expanded="true" signature="6005:6078" ph="SELECT upora... Uporabnik" />
-            <marker date="1515657370847" expanded="true" signature="6481:6526" ph="SELECT ime, Igralci" />
+            <marker date="1519235566139" expanded="true" signature="474:507" ph="SELECT * FRO... Tekma" />
+            <marker date="1519235566139" expanded="true" signature="897:942" ph="SELECT tocke... Lestvica" />
+            <marker date="1519235566139" expanded="true" signature="897:945" ph="SELECT tocke... Lestvica" />
+            <marker date="1519235566139" expanded="true" signature="897:946" ph="SELECT tocke... Lestvica" />
+            <marker date="1519235566139" expanded="true" signature="1025:1074" ph="SELECT tocke... Lestvica" />
+            <marker date="1519235566139" expanded="true" signature="1200:1246" ph="UPDATE Lestvica... " />
+            <marker date="1519235566139" expanded="true" signature="1200:1247" ph="UPDATE Lestvica... " />
+            <marker date="1519235566139" expanded="true" signature="1200:1248" ph="UPDATE Lestvica... " />
+            <marker date="1519235566139" expanded="true" signature="1200:1250" ph="UPDATE Lestvica... " />
+            <marker date="1519235566139" expanded="true" signature="1200:1252" ph="UPDATE Lestvica... " />
+            <marker date="1519235566139" expanded="true" signature="1347:1395" ph="UPDATE Lestvica... " />
+            <marker date="1519235566139" expanded="true" signature="1347:1396" ph="UPDATE Lestvica... " />
+            <marker date="1519235566139" expanded="true" signature="1347:1400" ph="UPDATE Lestvica... " />
+            <marker date="1519235566139" expanded="true" signature="4281:4472" ph="SELECT SELEC... " />
+            <marker date="1519235566139" expanded="true" signature="4281:4490" ph="SELECT id_ig... " />
+            <marker date="1519235566139" expanded="true" signature="4281:4557" ph="SELECT SELEC... " />
+            <marker date="1519235566139" expanded="true" signature="4281:4571" ph="SELECT * FRO... Dogodki" />
+            <marker date="1519235566139" expanded="true" signature="5101:5142" ph="INSERT INTO Tocke... " />
+            <marker date="1519235566139" expanded="true" signature="5112:5135" ph="UPDATE Tocke... " />
+            <marker date="1519235566139" expanded="true" signature="5112:5141" ph="UPDATE Tocke... " />
+            <marker date="1519235566139" expanded="true" signature="5351:5413" ph="SELECT upora... Uporabnik" />
+            <marker date="1519235566139" expanded="true" signature="5351:5443" ph="SELECT upora... Uporabnik" />
+            <marker date="1519235566139" expanded="true" signature="5351:5462" ph="SELECT upora... Uporabnik" />
+            <marker date="1519235566139" expanded="true" signature="5755:5811" ph="INSERT INTO Uporabnik... " />
+            <marker date="1519235566139" expanded="true" signature="6005:6078" ph="SELECT upora... Uporabnik" />
+            <marker date="1519235566139" expanded="true" signature="6481:6526" ph="SELECT ime, Igralci" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spletni_vmesnik.py">
+    <entry file="file://$PROJECT_DIR$/spletni_vmesnik.py" />
+    <entry file="file://$PROJECT_DIR$/views/registracija.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="38" column="19" lean-forward="false" selection-start-line="38" selection-start-column="7" selection-end-line="38" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-            <marker date="1515657370826" expanded="true" signature="453:454" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Views/izberi_ekipo.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-153">
-          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="7" selection-end-column="99" />
-          <folding>
-            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Views/registracija.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="54" column="47" lean-forward="false" selection-start-line="54" selection-start-column="4" selection-end-line="54" selection-end-column="47" />
+        <state relative-caret-position="850">
+          <caret line="50" column="25" lean-forward="false" selection-start-line="50" selection-start-column="25" selection-end-line="50" selection-end-column="25" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Views/prijava.html">
+    <entry file="file://$PROJECT_DIR$/views/izberi_ekipo.html" />
+    <entry file="file://$PROJECT_DIR$/app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="564">
-          <caret line="76" column="0" lean-forward="false" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
+        <state relative-caret-position="357">
+          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/prijava.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="36" lean-forward="true" selection-start-line="13" selection-start-column="36" selection-end-line="13" selection-end-column="36" />
           <folding />
         </state>
       </provider>

@@ -80,9 +80,14 @@ def prijava():
     username = request.forms.get('username')
     password = request.forms.get('password')
     if preveriPrijavo(username,password)[0]:
-        return redirect('/prva_stran/{0}'.format(username))
+        return redirect('prva_stran.html')
     else:
         return template('prijava.html', opozorilo = preveriPrijavo(username, password)[1])
+
+@get('/prva_stran')
+def prvaStran():
+    rezultat=lestvica()
+    return template('prva_stran.html', rezultat=rezultat)
 
 # poženemo strežnik na portu 8080, glej http://localhost:8080/
 run(host='localhost', port=8080)
