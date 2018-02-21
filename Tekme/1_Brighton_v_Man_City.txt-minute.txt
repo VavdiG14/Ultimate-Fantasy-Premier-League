@@ -1,0 +1,37 @@
+Mat Ryan;90
+Lewis Dunk;90
+Markus Suttner;90
+Shane Duffy;90
+Bruno;90
+Davy Pröpper;90
+Solly March;75'
+Dale Stephens;90
+Isaiah Brown;24'
+Pascal Groß;90
+Tomer Hemed;60'
+Niki Mäenpää;0
+Liam Rosenior;0
+Uwe Hünemeier;0
+Steve Sidwell;0
+Jamie Murphy;24'
+Anthony Knockaert;75'
+Glenn Murray;60'
+-----------------
+Ederson;90
+Vincent Kompany;90
+John Stones;90
+Nicolás Otamendi;90
+Fernandinho;90
+Kyle Walker;90
+David Silva;90
+Kevin De Bruyne;90
+Danilo;68'
+Sergio Agüero;83'
+Gabriel Jesus;78'
+Claudio Bravo;0
+Eliaquim Mangala;0
+Bernardo Silva;83'
+Phil Foden;0
+Yaya Touré;0
+Leroy Sané;68'
+Raheem Sterling;78'

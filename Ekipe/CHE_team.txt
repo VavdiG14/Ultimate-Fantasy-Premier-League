@@ -1,0 +1,27 @@
+Photo for Willy CaballeroWilly Caballero	Goalkeeper	 Argentina
+Photo for Thibaut CourtoisThibaut Courtois	Goalkeeper	 Belgium
+Photo for EduardoEduardo	Goalkeeper	 Portugal
+Photo for Marcos AlonsoMarcos Alonso	Defender	 Spain
+Photo for Gary CahillGary Cahill	Defender	 England
+Photo for César AzpilicuetaCésar Azpilicueta	Defender	 Spain
+Photo for David LuizDavid Luiz	Defender	 Brazil
+Photo for Cesc FàbregasCesc Fàbregas	Midfielder	 Spain
+Photo for N'Golo KantéN'Golo Kanté	Midfielder	 France
+Photo for Eden HazardEden Hazard	Midfielder	 Belgium
+Photo for Victor MosesVictor Moses	Midfielder	 Nigeria
+Photo for WillianWillian	Midfielder	 Brazil
+Photo for PedroPedro	Forward	 Spain
+Photo for Michy BatshuayiMichy Batshuayi	Forward	 Belgium
+Photo for Antonio RüdigerAntonio Rüdiger	Defender	 Germany
+Photo for Tiemoué BakayokoTiemoué Bakayoko	Midfielder	 France
+Photo for Andreas ChristensenAndreas Christensen	Defender	 Denmark
+Photo for Charly MusondaCharly Musonda	Midfielder	 Belgium
+Photo for Álvaro MorataÁlvaro Morata	Forward	 Spain
+Photo for Davide ZappacostaDavide Zappacosta	Defender	 Italy
+Photo for Daniel DrinkwaterDaniel Drinkwater	Midfielder	 England
+Photo for Abdul Rahman BabaAbdul Rahman Baba	Defender	 Ghana
+Photo for Kyle ScottKyle Scott	Midfielder	 United States
+Photo for Ethan AmpaduEthan Ampadu	Midfielder	 Wales
+Photo for Dujon SterlingDujon Sterling	Midfielder	 England
+Photo for Jake Clarke-SalterJake Clarke-Salter	Defender	 England
+Photo for KenedyKenedy	Midfielder	 Brazil

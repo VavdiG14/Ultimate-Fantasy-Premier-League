@@ -1,0 +1,37 @@
+David de Gea;90
+Daley Blind;90
+Antonio Valencia;90
+Eric Bailly;90
+Phil Jones;90
+Paul Pogba;90
+Henrikh Mkhitaryan;88'
+Nemanja Matic;90
+Juan Mata;76'
+Marcus Rashford;80'
+Romelu Lukaku;90
+Sergio Romero;0
+Chris Smalling;0
+Matteo Darmian;0
+Ander Herrera;0
+Marouane Fellaini;76'
+Jesse Lingard;88'
+Anthony Martial;80'
+-----------------
+Joe Hart;90
+Arthur Masuaku;81'
+Pablo Zabaleta;90
+Angelo Ogbonna;90
+Winston Reid;90
+André Ayew;90
+Edimilson Fernandes;60'
+Marko Arnautovic;90
+Mark Noble;61'
+Pedro Obiang;90
+Chicharito;90
+Adrián;0
+Sam Byram;0
+James Collins;0
+José Fonte;0
+Aaron Cresswell;81'
+Declan Rice;61'
+Diafra Sakho;60'
