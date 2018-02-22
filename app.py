@@ -43,10 +43,10 @@ def izberiEkipo():
 
 @get('/team')
 def mojaEkipa():
-    return template('team.html',ime_ekipe = "KANDIX", golmani = [("David De Gea", "MAN UTD")],
-                    obramba = [("Blaz Poljanec", "LIV"), ("Phil Jones", "MAN UTD"), ("Davies", "TOT"),("Gomez", "TOT")],
-                    sredina=[("N'Kate", "LIV"), ("Salah", "MAN UTD"), ("Valencia", "TOT"), ("Hazard", "TOT")],
-                    napad=[("Sergio Aguero", "LIV"), ("Lukaku", "MAN UTD")]
+    return template('team.html',ime_ekipe = "KANDIX", golmani = [("David De Gea", "MAN UTD"),("Salah", "MAN UTD")],
+                    obramba = [("Salah", "MAN UTD"),("Salah", "MAN UTD"), ("Phil Jones", "MAN UTD"), ("Davies", "TOT"),("Gomez", "TOT")],
+                    sredina=[("N'Kate", "LIV"), ("Salah", "MAN UTD"), ("Valencia", "TOT"), ("Hazard", "TOT"),("Blaz Poljanec", "LIV")],
+                    napad=[("Sergio Aguero", "LIV"), ("Lukaku", "MAN UTD"),("Hazard", "TOT")]
                     )
 
 
