@@ -35,7 +35,7 @@ def registriraj():
 
 @get('/prijava')
 def prijava():
-    return template('prijava.html', opozorilo = " ")
+    return template('prijava.html', opozorilo = None)
 
 @get('/ekipa')
 def izberiEkipo():
@@ -43,16 +43,11 @@ def izberiEkipo():
 
 @get('/team')
 def mojaEkipa():
-    return template('team.html',ime_ekipe = "KANDIX", golmani = [("David De Gea", "MAN UTD")],
-                    obramba = [("Blaz Poljanec", "LIV"), ("Phil Jones", "MAN UTD"), ("Davies", "TOT"),("Gomez", "TOT")],
-                    sredina=[("N'Kate", "LIV"), ("Salah", "MAN UTD"), ("Valencia", "TOT"), ("Hazard", "TOT")],
-                    napad=[("Sergio Aguero", "LIV"), ("Lukaku", "MAN UTD")]
+    return template('team.html',ime_ekipe = "KANDIX", golmani = [("David De Gea", "MAN UTD"),("Salah", "MAN UTD")],
+                    obramba = [("Salah", "MAN UTD"),("Salah", "MAN UTD"), ("Phil Jones", "MAN UTD"), ("Davies", "TOT"),("Gomez", "TOT")],
+                    sredina=[("N'Kate", "LIV"), ("Salah", "MAN UTD"), ("Valencia", "TOT"), ("Hazard", "TOT"),("Blaz Poljanec", "LIV")],
+                    napad=[("Sergio Aguero", "LIV"), ("Lukaku", "MAN UTD"),("Hazard", "TOT")]
                     )
-
-
-@get('/about')
-def onaju():
-    return template('oprojektu.html')
 
 
 @post('/register')
@@ -68,7 +63,7 @@ def registriraj():
         return template('registracija.html', opozorilo = 'Gesli se ne ujemata')
     if preveriPristnost(username, email, team, password)[0]:
         shraniUporabnika(username, email, team, password)
-        return redirect('izberi_ekipo')
+        return redirect('ekipa')
     else:
         return template('registracija.html', opozorilo = preveriPristnost(username, email, team, password)[1])
 
@@ -76,11 +71,11 @@ def registriraj():
 
 
 @post('/signup')
-def prijava():
+def prijava1():
     username = request.forms.get('username')
     password = request.forms.get('password')
     if preveriPrijavo(username,password)[0]:
-        return redirect('prva_stran.html')
+        return redirect('team')
     else:
         return template('prijava.html', opozorilo = preveriPrijavo(username, password)[1])
 
