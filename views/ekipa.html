@@ -56,7 +56,7 @@
                 </div>
                 <div class="col-md-4">
                     <div class="info-icon">
-                        <div class="icon text-danger">
+                        <div id="naprej" class="icon text-danger">
                             <i class="pe-7s-angle-right-circle"></i>
                         </div>
                             <h3>Naprej </h3>
@@ -125,6 +125,7 @@
         </div>
      </div>
  </div>
+<form id="form" action="/ekipa" method="POST"></form>
 </body>
 
   <script>
@@ -250,6 +251,18 @@
          document.getElementById('steviloIg').innerHTML = String(st_igralcev) + "/15";
          table1.row('.selected').remove().draw( false );
          debugger
+    } );
+    $('#naprej').click( function () {
+        form = $('#form');
+        form.empty();
+        for (i=0; i < golmani.length; i++) {
+            form.append($('<input>').attr({
+                type: 'hidden',
+                name: 'gk',
+                value: golmani[i]
+            }));
+        }
+        form.submit();
     } );
 } );
 
