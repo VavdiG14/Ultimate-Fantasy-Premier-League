@@ -41,6 +41,11 @@ def prijava():
 def izberiEkipo():
     return template('ekipa.html', rezultat= pokaziIgralce())
 
+@post('/ekipa')
+def sestaviEkipo():
+    golmani = request.forms.getall('gk')
+    return '; '.join(golmani)
+
 @get('/team')
 def mojaEkipa():
     return template('team.html',ime_ekipe = "KANDIX", golmani = [("David De Gea", "MAN UTD"),("Salah", "MAN UTD")],
