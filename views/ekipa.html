@@ -179,15 +179,14 @@
             var poz_igralca =$(this).closest('tr').find('td:nth-last-child(3)').text();
             var ime_igralca =$(this).closest('tr').find('td:nth-last-child(4)').text();
             const result = ekipe.filter(i => i === klub_igralca).length; //preveri koliko igralcev iz ene ekipe
-            var inG = $.inArray(new Array(ime_igralca, poz_igralca, klub_igralca, cena_igralca), seznam_igralcev);
-            if (result >2 || inG !== -1 || golmani.length > 2 || defender.length > 5  || mid.length > 5 || fwd.length > 3){
+            var inG = $.inArray(ime_igralca, seznam_igralcev);
+            if (result > 2 || inG !== -1 || golmani.length > 2 || defender.length > 4  || mid.length > 4 || fwd.length > 2){
                  $(this).removeClass('selected');
             }
             else {
-
                 //TODO: 2 golmana, 5 branilcev, 5 mid, 3 fwd
                 table1.row.add([ime_igralca, poz_igralca, klub_igralca, cena_igralca]).draw(false);
-                seznam_igralcev.push(new Array(ime_igralca, poz_igralca, klub_igralca, cena_igralca));
+                seznam_igralcev.push(ime_igralca);
                 if (poz_igralca == "GK"){
                     golmani.push(new Array(ime_igralca, poz_igralca, klub_igralca));
                 }
@@ -225,6 +224,7 @@
          var cena_igralca1 = vrstica[3];
          var poz_ig = vrstica[1];
          var indeks = 0;
+         var indeks1 = 0;
          if (poz_ig == "GK"){
              indeks = golmani.indexOf((vrstica[0],vrstica[1], vrstica[2]));
              golmani.splice(indeks, 1);
@@ -243,7 +243,7 @@
          }
          cena += Number(cena_igralca1);
          st_igralcev -= 1;
-         indeks = seznam_igralcev.indexOf(vrstica);
+         indeks = seznam_igralcev.indexOf(vrstica[0]);
          seznam_igralcev.splice(indeks, 1);
          indeks1 = ekipe.indexOf(vrstica[2]);
          ekipe.splice(indeks1,1);

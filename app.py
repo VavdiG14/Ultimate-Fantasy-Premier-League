@@ -89,5 +89,9 @@ def prvaStran():
     rezultat=lestvica()
     return template('prva_stran.html', rezultat=rezultat)
 
+@post('/naprej')
+def shrani_ekipo():
+    return
+
 # poženemo strežnik na portu 8080, glej http://localhost:8080/
 run(host='localhost', port=8080)
