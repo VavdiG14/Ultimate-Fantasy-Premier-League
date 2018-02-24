@@ -73,6 +73,7 @@
             <table id="example" class="display" cellspacing="0" >
                   <thead>
                     <tr>
+                        <th>ID</th>
                       <th>Igralec</th>
                       <th>Pozicija</th>
                       <th>Klub</th>
@@ -81,6 +82,7 @@
                   </thead>
                   <tfoot>
                     <tr>
+                        <th>ID</th>
                       <th>Igralec</th>
                     <th>Pozicija</th>
                     <th>Klub</th>
@@ -88,8 +90,9 @@
                   </tr>
                   </tfoot>
                   <tbody>
-                  %for ime, pozicija, klub, cena in rezultat:
+                  %for id, ime, pozicija, klub, cena in rezultat:
                   <tr>
+                      <td>{{id}}</td>
                     <td> {{ime}} </td>
                     <td>{{pozicija}}</td>
                     <td> {{klub}}</td>
@@ -100,37 +103,55 @@
                 </table>
             </div>
               <div  style="float:left; width:50%">
-            <table id="example1" class="display" cellspacing="0" >
-                  <thead>
-                    <tr>
-                      <th>Igralec</th>
-                      <th>Pozicija</th>
-                      <th>Klub</th>
-                      <th>Cena</th>
-                    </tr>
-                  </thead>
-                  <tfoot>
-                    <tr>
-                      <th>Igralec</th>
-                      <th>Pozicija</th>
-                      <th>Klub</th>
-                      <th>Cena</th>
-                  </tr>
-                  </tfoot>
-                  <tbody>
-                  </tbody>
-                </table>
-             </div>
+        <table id="example1" class="display" cellspacing="0" >
+              <thead>
+                <tr>
+                    <th>ID</th>
+                  <th>Igralec</th>
+                  <th>Pozicija</th>
+                  <th>Klub</th>
+                  <th>Cena</th>
+                </tr>
+              </thead>
+              <tfoot>
+                <tr>
+                    <th>ID</th>
+                  <th>Igralec</th>
+                  <th>Pozicija</th>
+                  <th>Klub</th>
+                  <th>Cena</th>
+              </tr>
+              </tfoot>
+              <tbody>
+              </tbody>
+        </table>
+    </div>
             <button id="button"> Delete</button>
-        </div>
-     </div>
+</div>
+ </div>
  </div>
 <form id="form" action="/ekipa" method="POST"></form>
 </body>
 
   <script>
+      $(document).ready(function() {
+        $('#example1').DataTable( {
+        "columnDefs": [
+                {
+                    "targets": [ 0 ],
+                    "visible": false,
+                    "searchable": false
+                }]
+        })
+        });
     $(document).ready(function() {
         $('#example').DataTable( {
+                        "columnDefs": [
+                {
+                    "targets": [0],
+                    "visible": false,
+                    "searchable": false
+                }],
         initComplete: function () {
             this.api().columns().every( function () {
                 var column = this;
@@ -173,37 +194,37 @@
         else {
             table.$('tr.selected').removeClass('selected');
             $(this).addClass('selected');
-
+            var id_igralca =table.row('.selected').data()[0];
             var cena_igralca =$(this).closest('tr').find('td:last-child').text();
             var klub_igralca =$(this).closest('tr').find('td:nth-last-child(2)').text();
             var poz_igralca =$(this).closest('tr').find('td:nth-last-child(3)').text();
             var ime_igralca =$(this).closest('tr').find('td:nth-last-child(4)').text();
             const result = ekipe.filter(i => i === klub_igralca).length; //preveri koliko igralcev iz ene ekipe
-            var inG = $.inArray(ime_igralca, seznam_igralcev);
-            if (result > 2 || inG !== -1 || golmani.length > 2 || defender.length > 4  || mid.length > 4 || fwd.length > 2){
+            var inG = $.inArray(id_igralca, seznam_igralcev);
+            if (result > 2 || inG !== -1 || golmani.length > 2 || defender.length > 5  || mid.length > 5 || fwd.length > 3){
                  $(this).removeClass('selected');
             }
             else {
                 //TODO: 2 golmana, 5 branilcev, 5 mid, 3 fwd
-                table1.row.add([ime_igralca, poz_igralca, klub_igralca, cena_igralca]).draw(false);
-                seznam_igralcev.push(ime_igralca);
+                table1.row.add([id_igralca, ime_igralca, poz_igralca, klub_igralca, cena_igralca]).draw(false);
+                seznam_igralcev.push(id_igralca);
                 if (poz_igralca == "GK"){
-                    golmani.push(new Array(ime_igralca, poz_igralca, klub_igralca));
+                    golmani.push(id_igralca);
                 }
                 else if (poz_igralca == "DEF"){
-                    defender.push(new Array(ime_igralca, poz_igralca, klub_igralca));
+                    defender.push(id_igralca);
                 }
                 else if (poz_igralca == "MID"){
-                    mid.push(new Array(ime_igralca, poz_igralca, klub_igralca));
+                    mid.push(id_igralca);
                 }
                 else if (poz_igralca == "FWD"){
-                    fwd.push(new Array(ime_igralca, poz_igralca, klub_igralca));
+                    fwd.push(id_igralca);
                 }
                 cena -= Number(cena_igralca);
                 st_igralcev += 1;
                 document.getElementById('steviloIg').innerHTML = String(st_igralcev) + "/15";
                 document.getElementById('trenutnaCena').innerHTML = String(cena);
-                ekipe.push(klub_igralca)
+                ekipe.push(klub_igralca);
                 debugger
             }
         }
@@ -221,31 +242,31 @@
     } );
      $('#button').click( function () {
          var vrstica = table1.row('.selected').data();
-         var cena_igralca1 = vrstica[3];
-         var poz_ig = vrstica[1];
+         var cena_igralca1 = vrstica[4];
+         var id_igralca1 = vrstica[0];
          var indeks = 0;
-         var indeks1 = 0;
+         var poz_ig = vrstica[2];
          if (poz_ig == "GK"){
-             indeks = golmani.indexOf((vrstica[0],vrstica[1], vrstica[2]));
+             indeks = golmani.indexOf(id_igralca1);
              golmani.splice(indeks, 1);
          }
          else if (poz_ig == "DEF"){
-             indeks = defender.indexOf((vrstica[0],vrstica[1], vrstica[2]));
+             indeks = defender.indexOf(id_igralca1);
              defender.splice(indeks, 1);
          }
          else if(poz_ig == "MID"){
-             indeks = mid.indexOf((vrstica[0],vrstica[1], vrstica[2]));
+             indeks = mid.indexOf(id_igralca1);
              mid.splice(indeks, 1);
          }
          else if(poz_ig == "FWD"){
-             indeks = fwd.indexOf((vrstica[0],vrstica[1], vrstica[2]));
+             indeks = fwd.indexOf(id_igralca1);
              fwd.splice(indeks, 1);
          }
          cena += Number(cena_igralca1);
          st_igralcev -= 1;
-         indeks = seznam_igralcev.indexOf(vrstica[0]);
+         indeks = seznam_igralcev.indexOf(id_igralca1);
          seznam_igralcev.splice(indeks, 1);
-         indeks1 = ekipe.indexOf(vrstica[2]);
+         indeks1 = ekipe.indexOf(vrstica[3]);
          ekipe.splice(indeks1,1);
          document.getElementById('trenutnaCena').innerHTML = String(cena);
          document.getElementById('steviloIg').innerHTML = String(st_igralcev) + "/15";
@@ -255,11 +276,11 @@
     $('#naprej').click( function () {
         form = $('#form');
         form.empty();
-        for (i=0; i < golmani.length; i++) {
+        for (i=0; i < seznam_igralcev.length; i++) {
             form.append($('<input>').attr({
                 type: 'hidden',
                 name: 'gk',
-                value: golmani[i]
+                value: seznam_igralcev[i]
             }));
         }
         form.submit();

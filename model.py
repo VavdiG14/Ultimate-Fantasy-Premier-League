@@ -164,11 +164,15 @@ def shraniUporabnika(username, email, team, password):
 def preveriPrijavo(username,password):
     with sqlite3.connect(baza) as con:
         cur = con.cursor()
-        cur.execute("SELECT uporabnisko_ime,geslo FROM Uporabnik WHERE uporabnisko_ime = '{0}'".format(username))
+        cur.execute("SELECT uporabnisko_ime,geslo,ekipa FROM Uporabnik WHERE uporabnisko_ime = '{0}'".format(username))
         a = cur.fetchall()
+        print(a)
         if a != []:
             if a[0][1] == password:
-                return (True, "")
+                if a[0][2] == 'None':
+                    return (True, None)
+                else:
+                    return (True, "")
             else:
                 return (False, "Geslo se ne ujema. Poskusi ponovno.")
         else:
@@ -177,7 +181,7 @@ def preveriPrijavo(username,password):
 def pokaziIgralce():
     with sqlite3.connect(baza) as con:
         cur = con.cursor()
-        cur.execute("SELECT ime, pozicija, klub, cena FROM Igralci")
+        cur.execute("SELECT id_igralca,ime, pozicija, klub, cena FROM Igralci")
         return cur.fetchall()
 
 def lestvica():
@@ -185,3 +189,40 @@ def lestvica():
         cur=con.cursor()
         cur.execute("SELECT ime,tocke FROM Lestvica ORDER BY tocke DESC")
         return cur.fetchall()
+
+def shraniEkipo(string, uporabnik):
+    with sqlite3.connect(baza) as con:
+        cur = con.cursor()
+        cur.execute("UPDATE Uporabnik SET ekipa = '{0}' WHERE uporabnisko_ime ='{1}'".format(string, uporabnik))
+    return
+
+def poisciUporabnika(username):
+    with sqlite3.connect(baza) as con:
+        cur = con.cursor()
+        cur.execute("SELECT ime_ekipe,ekipa, tocke_skupaj, tocke_krog, tocke_krog_nazaj, krog FROM Uporabnik WHERE uporabnisko_ime = '{0}'".format(username))
+        return cur.fetchall()
+
+def poisciIgralca(id):
+    with sqlite3.connect(baza) as con:
+        cur = con.cursor()
+        cur.execute("SELECT ime, klub, pozicija FROM Igralci WHERE id_igralca = {0}".format(id))
+        return cur.fetchall()
+
+def postaviIgralce(string):
+    gk = []
+    def1 = []
+    mid = []
+    fwd = []
+    sez = string[1:-1]
+    sez1 = list(map(int, sez.split(",")))
+    for i in sez1:
+        igralec = poisciIgralca(i)
+        if igralec[0][2] == 'GK':
+            gk.append(igralec[0])
+        elif igralec[0][2] == 'DEF':
+            def1.append(igralec[0])
+        elif igralec[0][2] == 'MID':
+            mid.append(igralec[0])
+        else:
+            fwd.append(igralec[0])
+    return (gk,def1,mid,fwd)
