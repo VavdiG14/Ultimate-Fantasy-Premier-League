@@ -189,9 +189,9 @@ def vRazredIgralec(vhodna_datoteka, rumeni,strelci,podajalci,rdeciKarton):
 import sqlite3
 
 
-baza = "Ultimate-Fantasy-Premier-Leauge/Premier_Leauge.db"
+baza = "Premier_Leauge.db"
 
-for i in range(22351, 22352):
+for i in range(22402, 22412):
     print(i)
     krog, vhodna, gol, asistenca, rdeci = izberiTekmo(str(i))
     strelci, podajalci, rezultat = vSlovar(gol, asistenca)
@@ -226,4 +226,4 @@ for i in range(22351, 22352):
                 continue
             print(id_i[0])
             print(k)
-            #cur.execute("INSERT INTO  Dogodki VALUES ({0},{1},{2},{3},{4},{5},{6},{7},{8},0,0,{9},{10})".format(i, id_i[0], krog, k.g, k.a, k.rumeniK, k.rdeciK,int(cleanSheet), k.m, k.og, prejeti))
+            cur.execute("INSERT INTO  Dogodki VALUES ({0},{1},{2},{3},{4},{5},{6},{7},{8},0,0,{9},{10})".format(i, id_i[0], krog, k.g, k.a, k.rumeniK, k.rdeciK,int(cleanSheet), k.m, k.og, prejeti))

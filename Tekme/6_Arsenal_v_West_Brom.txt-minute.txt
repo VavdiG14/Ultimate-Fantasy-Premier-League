@@ -1,0 +1,37 @@
+Petr Cech;90
+Shkodran Mustafi;90
+Laurent Koscielny;90
+Nacho Monreal;90
+Granit Xhaka;90
+Mohamed Elneny;90
+Sead Kolasinac;90
+Héctor Bellerín;90
+Aaron Ramsey;90 +3'
+Alexandre Lacazette;83'
+Alexis Sánchez;83'
+David Ospina;0
+Per Mertesacker;0
+Mesut Özil;83'
+Jack Wilshere;0
+Ainsley Maitland-Niles;90 +3'
+Olivier Giroud;83'
+Theo Walcott;0
+-----------------
+Ben Foster;90
+Ahmed Hegazi;90
+Jonny Evans;90
+Craig Dawson;90
+Kieran Gibbs;90
+Gareth Barry;90
+Grzegorz Krychowiak;90
+Allan Nyom;74'
+Jake Livermore;63'
+Hal Robson-Kanu;64'
+Jay Rodriguez;90
+Boaz Myhill;0
+Chris Brunt;0
+James McClean;0
+Claudio Yacob;0
+James Morrison;63'
+Matt Phillips;74'
+Salomón Rondón;64'

@@ -1,0 +1,37 @@
+Ederson;90
+John Stones;65'
+Vincent Kompany;90
+Nicolás Otamendi;90
+David Silva;90
+Fernandinho;90
+Leroy Sané;69'
+Kevin De Bruyne;90
+Kyle Walker;90
+Sergio Agüero;90
+Gabriel Jesus;45'
+Claudio Bravo;0
+Eliaquim Mangala;0
+Danilo;65'
+Phil Foden;0
+Yaya Touré;0
+Bernardo Silva;69'
+Raheem Sterling;45'
+-----------------
+Jordan Pickford;90
+Michael Keane;90
+Phil Jagielka;90
+Ashley Williams;61'
+Tom Davies;61'
+Idrissa Gueye;90
+Leighton Baines;90
+Morgan Schneiderlin;90
+Mason Holgate;90
+Wayne Rooney;90'
+Dominic Calvert-Lewin;90
+Maarten Stekelenburg;0
+Cuco Martina;0
+Muhamed Besic;90'
+Gylfi Sigurdsson;61'
+Davy Klaassen;61'
+Ademola Lookman;0
+Kevin Mirallas;0

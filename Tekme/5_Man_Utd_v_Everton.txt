@@ -1,0 +1,428 @@
+David de Gea
+Phil Jones
+Eric Bailly
+Ashley Young
+Antonio Valencia
+Nemanja Matic
+Juan Mata
+                        
+
+77'
+Marcus Rashford
+                        
+
+61'
+Henrikh Mkhitaryan
+                        
+
+
+88'
+Marouane Fellaini
+Romelu Lukaku
+Sergio Romero
+Matteo Darmian
+Chris Smalling
+Michael Carrick
+Ander Herrera
+                        
+
+77'
+Jesse Lingard
+                        
+
+61'
+Anthony Martial
+                        
+
+88'
+-----------------
+Jordan Pickford
+Phil Jagielka
+Ashley Williams
+Michael Keane
+Cuco Martina
+Leighton Baines
+Morgan Schneiderlin
+Idrissa Gueye
+                        
+
+76'
+Tom Davies
+                        
+
+66'
+Gylfi Sigurdsson
+Wayne Rooney
+                        
+
+82'
+Maarten Stekelenburg
+Mason Holgate
+Kevin Mirallas
+                        
+
+82'
+Davy Klaassen
+Muhamed Besic
+Sandro Ramírez
+                        
+
+66'
+Dominic Calvert-Lewin
+                        
+
+76'
+------DOMACI ----------
+-------GOLI---------
+Manchester United
+MUN
+Antonio Valencia 4'
+                
+Goal
+
+
+
+Henrikh Mkhitaryan 83'
+                
+Goal
+
+
+
+Romelu Lukaku 89'
+                
+Goal
+
+
+
+Anthony Martial 90 +2' (pen)
+                
+label.penalty.scored
+-------ASISTENCE----------
+Nemanja Matic 4'
+          
+
+Romelu Lukaku 83'
+          
+
+Jesse Lingard 89'
+-------POTEK TEKME--------
+Goal4Mins
+
+
+
+4'GoalGoal
+
+
+
+    MUN
+  
+1 - 0
+
+    EVE
+      
+
+
+
+
+
+
+25. Antonio Valencia
+
+Ast. Nemanja Matic
+Substitution61Mins
+
+
+
+61'SubstitutionSubstitution
+
+
+
+    MUN
+  
+1 - 0
+
+    EVE
+      
+
+
+
+
+
+
+19. Marcus Rashford
+          Substitution Off
+
+
+
+
+
+
+14. Jesse Lingard
+          Substitution On
+Substitution77Mins
+
+
+
+77'SubstitutionSubstitution
+
+
+
+    MUN
+  
+1 - 0
+
+    EVE
+      
+
+
+
+
+
+
+8. Juan Mata
+          Substitution Off
+
+
+
+
+
+
+21. Ander Herrera
+          Substitution On
+Yellow Card82Mins
+
+
+
+82'Yellow CardYellow Card
+
+
+
+    MUN
+  
+1 - 0
+
+    EVE
+      
+
+
+
+
+
+
+3. Eric Bailly
+Goal83Mins
+
+
+
+83'GoalGoal
+
+
+
+    MUN
+  
+2 - 0
+
+    EVE
+      
+
+
+
+
+
+
+22. Henrikh Mkhitaryan
+
+Ast. Romelu Lukaku
+Substitution88Mins
+
+
+
+88'SubstitutionSubstitution
+
+
+
+    MUN
+  
+2 - 0
+
+    EVE
+      
+
+
+
+
+
+
+22. Henrikh Mkhitaryan
+          Substitution Off
+
+
+
+
+
+
+11. Anthony Martial
+          Substitution On
+Goal89Mins
+
+
+
+89'GoalGoal
+
+
+
+    MUN
+  
+3 - 0
+
+    EVE
+      
+
+
+
+
+
+
+9. Romelu Lukaku
+
+Ast. Jesse Lingard
+label.penalty.scored90+Mins
+
+
+
+90 +2'Goallabel.penalty.scored
+
+
+
+    MUN
+  
+4 - 0
+
+    EVE
+      
+
+
+
+
+
+
+11. Anthony Martial
+----GOSTJE ---------
+-------GOLI---------
+Everton
+EVE
+
+-------ASISTENCE----------
+
+-------POTEK TEKME--------
+Yellow Card63Mins
+
+
+
+63'Yellow CardYellow Card
+
+
+
+    MUN
+  
+1 - 0
+
+    EVE
+      
+
+
+
+
+
+
+5. Ashley Williams
+Substitution66Mins
+
+
+
+66'SubstitutionSubstitution
+
+
+
+    MUN
+  
+1 - 0
+
+    EVE
+      
+
+
+
+
+
+
+26. Tom Davies
+          Substitution Off
+
+
+
+
+
+
+9. Sandro Ramírez
+          Substitution On
+Substitution76Mins
+
+
+
+76'SubstitutionSubstitution
+
+
+
+    MUN
+  
+1 - 0
+
+    EVE
+      
+
+
+
+
+
+
+17. Idrissa Gueye
+          Substitution Off
+
+
+
+
+
+
+29. Dominic Calvert-Lewin
+          Substitution On
+Substitution82Mins
+
+
+
+82'SubstitutionSubstitution
+
+
+
+    MUN
+  
+1 - 0
+
+    EVE
+      
+
+
+
+
+
+
+10. Wayne Rooney
+          Substitution Off
+
+
+
+
+
+
+11. Kevin Mirallas
+          Substitution On

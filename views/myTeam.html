@@ -11,8 +11,6 @@
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
     <link href="assets/css/bootstrap.css" rel="stylesheet" />
     <link href="assets/css/gaia.css" rel="stylesheet"/>
-    <script src="https://code.jquery.com/jquery-1.12.4.js" ></script>
-    <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
 
 
     <!--     Fonts and icons     -->
@@ -36,7 +34,7 @@
                 </p>
             </div>
             <div class="row">
-                <div class="col-md-3">
+                <div class="col-md-2">
                     <div class="info-icon">
                         <div class="icon text-danger">
                             <i class="pe-7s-add-user"></i>
@@ -45,7 +43,7 @@
                         <h3 id="pisi"></h3>
                     </div>
                 </div>
-                  <div class="col-md-3">
+                  <div class="col-md-2">
                     <div class="info-icon">
                         <div class="icon text-danger">
                             <i class="pe-7s-date"></i>
@@ -54,7 +52,7 @@
                         <h3>{{krog}} </h3>
                     </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-2">
                     <div class="info-icon">
                         <div class="icon text-danger">
                             <i class="pe-7s-piggy"></i>
@@ -63,16 +61,17 @@
                         <h3 >{{tocke_skupaj}} </h3>
                     </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-2">
                     <div class="info-icon">
                         <div class="icon text-danger">
-                            <i class="pe-7s-piggy"></i>
+                            <i class="pe-7s-back"></i>
                         </div>
-                            <h3>TOČKE KROG: </h3>
+                        <h3>TOČKE DOSEŽENE </h3>
+                            <h4>V {{int(krog)-1}}. KROGU </h4>
                         <h3 >{{tocke_krog}} </h3>
                     </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-2">
                     <div class="info-icon">
                         <div id="naslednjiKrog" class="icon text-danger">
                             <i class="pe-7s-angle-right-circle"></i>
@@ -92,9 +91,9 @@
             <small>{{i[1]}}</small>
           </h4>
              %if seznamTock is None:
-                <p>0</p>
+                <h3>0</h3>
             %else:
-                <p>{{seznamTock[s]}}</p>
+                <h3>{{seznamTock[s]}}</h3>
             %end
             <div>
                 <input type="checkbox" name="golman" value=1 id={{s}}>
@@ -114,9 +113,9 @@
             <small>{{j[1]}}</small>
           </h4>
                 %if seznamTock is None:
-                     <p>0</p>
+                     <h3>0</h3>
                 %else:
-                    <p>{{seznamTock[s+2]}}</p>
+                    <h3>{{seznamTock[s+2]}}</h3>
                 %end
                 <label><input type="checkbox" value="1" id={{s+2}}>Rezerva</label>
         </div>
@@ -130,9 +129,9 @@
             <small>{{m[1]}}</small>
           </h4>
                     %if seznamTock is None:
-                            <p>0</p>
+                            <h3>0</h3>
                     %else:
-                        <p>{{seznamTock[st+7]}}</p>
+                        <h3>{{seznamTock[st+7]}}</h3>
                     %end
               <label><input type="checkbox" value="1" id={{st+7}}>Rezerva</label>
         </div>
@@ -146,73 +145,136 @@
             <small>{{n[1]}}</small>
           </h4>
                     %if seznamTock is None:
-                        <p>0</p>
+                        <h3>0</h3>
                     %else:
-                        <p>{{seznamTock[s1+12]}}
+                        <h3>{{seznamTock[s1+12]}}</h3>
                     %end
               <label><input type="checkbox" value="1" id={{s1+12}}>Rezerva</label>
         </div>
                  %end
         </div>
-                 </div>
-                 </div>
+     </div>
+</div>
+<div class="container" style="margin-top:100px;">
+         <div style="width:100%">
+              <div style="float:left; width:40%">
+                  %if pregledKroga != None:
+
+                          <h3>Rezultati prejšnega kroga</h3>
+                    <table id="pregledKroga" class="display" cellspacing="0" >
+                          <thead>
+                            <tr>
+                                <th>Krog</th>
+                                <th>Domači</th>
+                                 <th>Rezultat</th>
+                                <th>Gostje</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                          %for krog,domaci, rezultat, gostje in pregledKroga:
+                          <tr>
+                              <td>{{krog}}</td>
+                            <td> {{domaci}} </td>
+                            <td>{{rezultat}}</td>
+                            <td> {{gostje}}</td>
+                          </tr>
+                          %end
+                          </tbody>
+                        </table>
+                    </div>
+                  %else:
+                    <div></div>
+                  %end
+             <div style="float:left; width:40%;margin-left: 100px;">
+                 <h3>Napoved za naslednji krog </h3>
+                 <table id="napoved" class="display" cellspacing="0" >
+                  <thead>
+                    <tr>
+                        <th>Krog</th>
+                        <th>Domači</th>
+                        <th>Gostje</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  %for domaci, gostje,krog in napovedKroga:
+                  <tr>
+                      <td>{{krog}}</td>
+                    <td> {{domaci}} </td>
+                    <td> {{gostje}}</td>
+                  </tr>
+                  %end
+                  </tbody>
+                </table>
              </div>
-        </div>
-
-
-<form id="form" action="/krog" method="POST"></form>
+         </div>
 </div>
 
 
+<form id="form" action="/krog" method="POST"></form>
+
 </body>
+
 <!--   core js files    -->
 <script src="assets/js/jquery.min.js" type="text/javascript"></script>
 <script src="assets/js/bootstrap.js" type="text/javascript"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.js" ></script>
+<script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+
+<script>
+    $(document).ready(function() {
+        var countChecked = function () {
+            var n = $("input:checked").length;
+            $("#pisi").text(n + " izbranih!");
+        };
+        countChecked();
+
+        $("input[type=checkbox]").on("click", countChecked);
+
+        $('#naslednjiKrog').click(function () {
+            var rez = [];
+            $("input:checked").each(function () {
+                var id = $(this).attr("id");
+                rez.push(id)
+            });
+            var igralci = {{!seznamIgralcev}};
+            for (i = 0; i < rez.length; i++) {
+                igralci[rez[i]] = 0;
+            }
+            form = $('#form');
+            form.empty();
+            for (i = 0; i < igralci.length; i++) {
+                form.append($('<input>').attr({
+                    type: 'hidden',
+                    name: 'mojih11',
+                    value: igralci[i]
+                }));
+            }
+            form.submit();
+            //Po možnosti dodaj alert, če je dolžina seznama različna od 4
+        })
+    });
+
+        $(document).ready(function() {
+            $('#pregledKroga').DataTable({
+                searching: false, paging: false
+            })
+    });
+        $(document).ready(function() {
+            $('#napoved').DataTable({
+                searching: false, paging: false
+            })
+    });
+
+</script>
+
+
 
 <!--  js library for devices recognition -->
 <script type="text/javascript" src="assets/js/modernizr.js"></script>
 
-<!--  script for google maps   -->
-<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
 
 <!--   file where we handle all the script from the Gaia - Bootstrap Template   -->
 <script type="text/javascript" src="assets/js/gaia.js"></script>
 <script src="assets/js/main.js"></script>
-
-
-<script>
-    var rezerve = [];
-  var countChecked = function() {
-    var n = $( "input:checked" ).length;
-    $( "#pisi" ).text( n  + " izbranih!" );
-};
-countChecked();
-
-$( "input[type=checkbox]" ).on( "click", countChecked );
-
-$('#naslednjiKrog').click( function () {
-    var rez = [];
-    $("input:checked").each(function () {
-        var id = $(this).attr("id");
-        rez.push(id)
-    });
-    var igralci = {{!seznamIgralcev}};
-    for (i=0; i < rez.length; i++){
-        igralci[rez[i]] = 0;
-    }
-    form = $('#form');
-        form.empty();
-        for (i=0; i < igralci.length; i++) {
-            form.append($('<input>').attr({
-                type: 'hidden',
-                name: 'mojih11',
-                value:igralci[i]
-            }));
-        }
-        form.submit();
-    //Po možnosti dodaj alert, če je dolžina seznama različna od 4
-})
-
-</script>
 
 </html>

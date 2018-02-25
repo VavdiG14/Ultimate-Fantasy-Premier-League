@@ -1,0 +1,37 @@
+Ederson;45 +1'
+Nicolás Otamendi;71'
+Danilo;90
+John Stones;90
+Fernandinho;90
+Benjamin Mendy;90
+Kevin De Bruyne;90
+David Silva;90
+Kyle Walker;90
+Sergio Agüero;90
+Gabriel Jesus;57'
+Claudio Bravo;45 +1'
+Eliaquim Mangala;71'
+Ilkay Gündogan;0
+Fabian Delph;0
+Leroy Sané;57'
+Bernardo Silva;0
+Phil Foden;0
+-----------------
+Simon Mignolet;90
+Ragnar Klavan;90
+Joel Matip;90
+Trent Alexander-Arnold;90
+Alberto Moreno;90
+Emre Can;90
+Jordan Henderson;90
+Georginio Wijnaldum;58'
+Roberto Firmino;67'
+Mohamed Salah;45'
+Sadio Mané;90
+Loris Karius;0
+James Milner;58'
+Joseph Gomez;0
+Dejan Lovren;0
+Alex Oxlade-Chamberlain;45'
+Dominic Solanke;67'
+Daniel Sturridge;0

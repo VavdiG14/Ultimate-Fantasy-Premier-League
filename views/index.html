@@ -107,7 +107,23 @@
                             <i class="pe-7s-gleam"></i>
                         </div>
                         <h3>FANTASY</h3>
-                        <p class="description"> Najkoristnejši igralci </p>
+                         <table id="example" class="display" cellspacing="0" align="center">
+                  <thead>
+                    <tr>
+                        <th>Igralec</th>
+                        <th>Točke</th>
+                    </tr>
+                  </thead>
+                  </tfoot>
+                  <tbody>
+                  %for tocke,igralec in najkoristnejsiIgralci:
+                  <tr>
+                      <td>{{igralec}}</td>
+                    <td> {{tocke}} </td>
+                  </tr>
+                  %end
+                  </tbody>
+                </table>
 
                     </div>
             </div>
@@ -128,9 +144,19 @@
 
 
 
-<!--   core js files    -->
 <script src="assets/js/jquery.min.js" type="text/javascript"></script>
 <script src="assets/js/bootstrap.js" type="text/javascript"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.js" ></script>
+<script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+
+
+<script>
+        $(document).ready(function() {
+            $('#nakoristnejsiI').DataTable({
+                searching: false, paging: false
+            })
+    });
+</script>
 
 <!--  js library for devices recognition -->
 <script type="text/javascript" src="assets/js/modernizr.js"></script>

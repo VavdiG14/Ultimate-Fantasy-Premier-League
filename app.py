@@ -24,9 +24,8 @@ def js(filepath):
 
 
 @route("/")
-@view("index")
 def glavniMenu():
-    return
+    return template('index.html', najkoristnejsiIgralci = najkoristnejsiIgralci())
 
 
 @route('/izberiEkipo')
@@ -66,6 +65,10 @@ def sestaviEkipo():
     shraniEkipo(list(map(int,igralci)), username)
     return redirect('/myTeam')
 
+def spremeni(tupl):
+    izid = str(tupl[1])+ " : " + str(tupl[2])
+    return (tupl[-1],tupl[0], izid, tupl[3])
+
 @get('/myTeam')
 def myTeam():
     username = request.get_cookie("racun", secret='some-secret-key1')
@@ -78,6 +81,11 @@ def myTeam():
         else:
             seznamTock = None
         golmani,obramba,zvezna,napadalci = postaviIgralce(ekipa)
+        if int(krog) <= 1:
+            tekme = None
+        else:
+            tekme = [spremeni(i) for i in pregledKroga(krog)]
+        napoved = napovedKroga(krog)
         return template('myTeam.html', ime_ekipe=ime_ekipe, golmani=golmani,
                     obramba=obramba,
                     sredina=zvezna,
@@ -86,7 +94,9 @@ def myTeam():
                     seznamTock=seznamTock,
                     tocke_krog=tocke_krog,
                     tocke_skupaj=tocke_skupaj,
-                    krog=krog)
+                    krog=krog,
+                    pregledKroga = tekme,
+                    napovedKroga = napoved)
     else:
         return redirect('prijava')
 
@@ -116,6 +126,7 @@ def registriraj():
         return template('registracija.html', opozorilo = 'Gesli se ne ujemata')
     if preveriPristnost(username, email, team, password)[0]:
         shraniUporabnika(username, email, team, password)
+        response.set_cookie("racun", username, secret='some-secret-key1')
         return redirect('izberiEkipo')
     else:
         return template('registracija.html', opozorilo = preveriPristnost(username, email, team, password)[1])

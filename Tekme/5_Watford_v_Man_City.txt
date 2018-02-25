@@ -1,0 +1,477 @@
+Heurelho Gomes
+Christian Kabasele
+Adrian Mariappa
+José Holebas
+Daryl Janmaat
+André Carrillo
+Tom Cleverley
+                        
+
+64'
+Richarlison
+Abdoulaye Doucouré
+Nathaniel Chalobah
+                        
+
+70'
+Andre Gray
+                        
+
+74'
+Orestis Karnezis
+Molla Wagué
+Marvin Zeegelaar
+Etienne Capoue
+                        
+
+70'
+Roberto Pereyra
+                        
+
+64'
+Isaac Success
+Troy Deeney
+                        
+
+74'
+-----------------
+Ederson
+Nicolás Otamendi
+John Stones
+Benjamin Mendy
+Kyle Walker
+Fernandinho
+Kevin De Bruyne
+                        
+
+66'
+David Silva
+                        
+
+78'
+Raheem Sterling
+Sergio Agüero
+Gabriel Jesus
+                        
+
+
+65'
+Claudio Bravo
+Danilo
+Eliaquim Mangala
+Fabian Delph
+Ilkay Gündogan
+                        
+
+66'
+Bernardo Silva
+                        
+
+65'
+Leroy Sané
+                        
+
+78'
+------DOMACI ----------
+-------GOLI---------
+Watford
+WAT
+
+-------ASISTENCE----------
+
+-------POTEK TEKME--------
+Yellow Card29Mins
+
+
+
+29'Yellow CardYellow Card
+
+
+
+    WAT
+  
+0 - 1
+
+    MCI
+      
+
+
+
+
+
+
+25. José Holebas
+Yellow Card40Mins
+
+
+
+40'Yellow CardYellow Card
+
+
+
+    WAT
+  
+0 - 3
+
+    MCI
+      
+
+
+
+
+
+
+16. Abdoulaye Doucouré
+Substitution64Mins
+
+
+
+64'SubstitutionSubstitution
+
+
+
+    WAT
+  
+0 - 4
+
+    MCI
+      
+
+
+
+
+
+
+8. Tom Cleverley
+          Substitution Off
+
+
+
+
+
+
+37. Roberto Pereyra
+          Substitution On
+Substitution70Mins
+
+
+
+70'SubstitutionSubstitution
+
+
+
+    WAT
+  
+0 - 4
+
+    MCI
+      
+
+
+
+
+
+
+14. Nathaniel Chalobah
+          Substitution Off
+
+
+
+
+
+
+29. Etienne Capoue
+          Substitution On
+Substitution74Mins
+
+
+
+74'SubstitutionSubstitution
+
+
+
+    WAT
+  
+0 - 4
+
+    MCI
+      
+
+
+
+
+
+
+18. Andre Gray
+          Substitution Off
+
+
+
+
+
+
+9. Troy Deeney
+          Substitution On
+----GOSTJE ---------
+-------GOLI---------
+Manchester City
+MCI
+Sergio Agüero 27', 31', 81'
+                
+Goal
+
+
+
+Gabriel Jesus 37'
+                
+Goal
+
+
+
+Nicolás Otamendi 63'
+                
+Goal
+
+
+
+Raheem Sterling 89' (pen)
+                
+label.penalty.scored
+-------ASISTENCE----------
+Kevin De Bruyne 27'
+          
+
+David Silva 31', 63'
+          
+
+Sergio Agüero 37'
+          
+
+Kyle Walker 81'
+-------POTEK TEKME--------
+Goal27Mins
+
+
+
+27'GoalGoal
+
+
+
+    WAT
+  
+0 - 1
+
+    MCI
+      
+
+
+
+
+
+
+10. Sergio Agüero
+
+Ast. Kevin De Bruyne
+Goal31Mins
+
+
+
+31'GoalGoal
+
+
+
+    WAT
+  
+0 - 2
+
+    MCI
+      
+
+
+
+
+
+
+10. Sergio Agüero
+
+Ast. David Silva
+Goal37Mins
+
+
+
+37'GoalGoal
+
+
+
+    WAT
+  
+0 - 3
+
+    MCI
+      
+
+
+
+
+
+
+33. Gabriel Jesus
+
+Ast. Sergio Agüero
+Goal63Mins
+
+
+
+63'GoalGoal
+
+
+
+    WAT
+  
+0 - 4
+
+    MCI
+      
+
+
+
+
+
+
+30. Nicolás Otamendi
+
+Ast. David Silva
+Substitution65Mins
+
+
+
+65'SubstitutionSubstitution
+
+
+
+    WAT
+  
+0 - 4
+
+    MCI
+      
+
+
+
+
+
+
+33. Gabriel Jesus
+          Substitution Off
+
+
+
+
+
+
+20. Bernardo Silva
+          Substitution On
+Substitution66Mins
+
+
+
+66'SubstitutionSubstitution
+
+
+
+    WAT
+  
+0 - 4
+
+    MCI
+      
+
+
+
+
+
+
+17. Kevin De Bruyne
+          Substitution Off
+
+
+
+
+
+
+8. Ilkay Gündogan
+          Substitution On
+Substitution78Mins
+
+
+
+78'SubstitutionSubstitution
+
+
+
+    WAT
+  
+0 - 4
+
+    MCI
+      
+
+
+
+
+
+
+21. David Silva
+          Substitution Off
+
+
+
+
+
+
+19. Leroy Sané
+          Substitution On
+Goal81Mins
+
+
+
+81'GoalGoal
+
+
+
+    WAT
+  
+0 - 5
+
+    MCI
+      
+
+
+
+
+
+
+10. Sergio Agüero
+
+Ast. Kyle Walker
+label.penalty.scored89Mins
+
+
+
+89'Goallabel.penalty.scored
+
+
+
+    WAT
+  
+0 - 6
+
+    MCI
+      
+
+
+
+
+
+
+7. Raheem Sterling

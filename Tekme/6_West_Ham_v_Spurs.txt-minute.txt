@@ -1,0 +1,37 @@
+Joe Hart;90
+José Fonte;74'
+Angelo Ogbonna;90
+Winston Reid;90
+Cheikhou Kouyaté;90
+Mark Noble;90
+Pablo Zabaleta;90
+Aaron Cresswell;90
+Marko Arnautovic;66'
+Chicharito;90
+Michail Antonio;28'
+Adrián;0
+Arthur Masuaku;74'
+Sam Byram;0
+Declan Rice;0
+André Ayew;66'
+Andy Carroll;28'
+Diafra Sakho;0
+-----------------
+Hugo Lloris;90
+Davinson Sánchez;90
+Toby Alderweireld;90
+Jan Vertonghen;90
+Ben Davies;90
+Eric Dier;90
+Serge Aurier;90
+Christian Eriksen;73'
+Moussa Sissoko;78'
+Harry Kane;89'
+Dele Alli;90
+Michel Vorm;0
+Kieran Trippier;78'
+Kyle Walker-Peters;0
+Harry Winks;73'
+Georges-Kévin Nkoudou;0
+Son Heung-Min;0
+Fernando Llorente;89'

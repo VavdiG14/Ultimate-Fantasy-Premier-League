@@ -1,0 +1,37 @@
+Jack Butland;90
+Geoff Cameron;45'
+Kurt Zouma;90
+Kevin Wimmer;90
+Erik Pieters;90
+Darren Fletcher;90
+Joe Allen;90
+Mame Biram Diouf;90
+Jesé;75'
+Xherdan Shaqiri;90
+Eric Maxim Choupo-Moting;90
+Lee Grant;0
+Bruno Martins Indi;45'
+Josh Tymon;0
+Charlie Adam;0
+Ramadan Sobhi;0
+Saido Berahino;75'
+Peter Crouch;0
+-----------------
+David de Gea;90
+Phil Jones;90
+Eric Bailly;90
+Antonio Valencia;90
+Matteo Darmian;90
+Paul Pogba;90
+Nemanja Matic;90
+Ander Herrera;72'
+Henrikh Mkhitaryan;84'
+Romelu Lukaku;90
+Marcus Rashford;72'
+Sergio Romero;0
+Daley Blind;0
+Chris Smalling;0
+Michael Carrick;0
+Juan Mata;72'
+Jesse Lingard;84'
+Anthony Martial;72'

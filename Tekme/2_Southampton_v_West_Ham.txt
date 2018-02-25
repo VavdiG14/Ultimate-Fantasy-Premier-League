@@ -1,0 +1,461 @@
+Fraser Forster
+Jack Stephens
+Ryan Bertrand
+Maya Yoshida
+Cédric Soares
+Steven Davis
+                        
+
+80'
+Oriol Romeu
+Dusan Tadic
+Nathan Redmond
+Mario Lemina
+                        
+
+65'
+Manolo Gabbiadini
+                        
+
+
+80'
+Alex McCarthy
+Jan Bednarek
+Sam McQueen
+James Ward-Prowse
+                        
+
+65'
+Sofiane Boufal
+Shane Long
+                        
+
+80'
+Charlie Austin
+                        
+
+80'
+-----------------
+Joe Hart
+José Fonte
+Angelo Ogbonna
+Aaron Cresswell
+Pablo Zabaleta
+André Ayew
+                        
+
+68'
+Mark Noble
+Michail Antonio
+                        
+
+68'
+Marko Arnautovic
+Declan Rice
+                        
+
+76'
+Chicharito
+Adrián
+Arthur Masuaku
+Sam Byram
+Edimilson Fernandes
+                        
+
+68'
+Pedro Obiang
+                        
+
+76'
+Diafra Sakho
+                        
+
+68'
+------DOMACI ----------
+-------GOLI---------
+Southampton
+SOU
+Manolo Gabbiadini 11'
+                
+Goal
+
+
+
+Dusan Tadic 38' (pen)
+                
+label.penalty.scored
+
+
+
+Charlie Austin 90 +3' (pen)
+                
+label.penalty.scored
+-------ASISTENCE----------
+Nathan Redmond 11'
+-------POTEK TEKME--------
+Goal11Mins
+
+
+
+11'GoalGoal
+
+
+
+    SOU
+  
+1 - 0
+
+    WHU
+      
+
+
+
+
+
+
+20. Manolo Gabbiadini
+
+Ast. Nathan Redmond
+Yellow Card15Mins
+
+
+
+15'Yellow CardYellow Card
+
+
+
+    SOU
+  
+1 - 0
+
+    WHU
+      
+
+
+
+
+
+
+11. Dusan Tadic
+label.penalty.scored38Mins
+
+
+
+38'Goallabel.penalty.scored
+
+
+
+    SOU
+  
+2 - 0
+
+    WHU
+      
+
+
+
+
+
+
+11. Dusan Tadic
+Substitution65Mins
+
+
+
+65'SubstitutionSubstitution
+
+
+
+    SOU
+  
+2 - 1
+
+    WHU
+      
+
+
+
+
+
+
+18. Mario Lemina
+          Substitution Off
+
+
+
+
+
+
+16. James Ward-Prowse
+          Substitution On
+Substitution80Mins
+
+
+
+80'SubstitutionSubstitution
+
+
+
+    SOU
+  
+2 - 2
+
+    WHU
+      
+
+
+
+
+
+
+20. Manolo Gabbiadini
+          Substitution Off
+
+
+
+
+
+
+10. Charlie Austin
+          Substitution On
+Substitution80Mins
+
+
+
+80'SubstitutionSubstitution
+
+
+
+    SOU
+  
+2 - 2
+
+    WHU
+      
+
+
+
+
+
+
+8. Steven Davis
+          Substitution Off
+
+
+
+
+
+
+7. Shane Long
+          Substitution On
+label.penalty.scored90+Mins
+
+
+
+90 +3'Goallabel.penalty.scored
+
+
+
+    SOU
+  
+3 - 2
+
+    WHU
+      
+
+
+
+
+
+
+10. Charlie Austin
+----GOSTJE ---------
+-------GOLI---------
+West Ham United
+WHU
+Marko Arnautovic 33'
+                
+Red Card
+
+
+
+Chicharito 44', 73'
+                
+Goal
+-------ASISTENCE----------
+
+-------POTEK TEKME--------
+Red Card33Mins
+
+
+
+33'Red CardRed Card
+
+
+
+    SOU
+  
+1 - 0
+
+    WHU
+      
+
+
+
+
+
+
+7. Marko Arnautovic
+Goal44Mins
+
+
+
+44'GoalGoal
+
+
+
+    SOU
+  
+2 - 1
+
+    WHU
+      
+
+
+
+
+
+
+17. Chicharito
+Substitution68Mins
+
+
+
+68'SubstitutionSubstitution
+
+
+
+    SOU
+  
+2 - 1
+
+    WHU
+      
+
+
+
+
+
+
+30. Michail Antonio
+          Substitution Off
+
+
+
+
+
+
+15. Diafra Sakho
+          Substitution On
+Substitution68Mins
+
+
+
+68'SubstitutionSubstitution
+
+
+
+    SOU
+  
+2 - 1
+
+    WHU
+      
+
+
+
+
+
+
+20. André Ayew
+          Substitution Off
+
+
+
+
+
+
+31. Edimilson Fernandes
+          Substitution On
+Goal73Mins
+
+
+
+73'GoalGoal
+
+
+
+    SOU
+  
+2 - 2
+
+    WHU
+      
+
+
+
+
+
+
+17. Chicharito
+Substitution76Mins
+
+
+
+76'SubstitutionSubstitution
+
+
+
+    SOU
+  
+2 - 2
+
+    WHU
+      
+
+
+
+
+
+
+41. Declan Rice
+          Substitution Off
+
+
+
+
+
+
+14. Pedro Obiang
+          Substitution On
+Yellow Card90+Mins
+
+
+
+90 +1'Yellow CardYellow Card
+
+
+
+    SOU
+  
+2 - 2
+
+    WHU
+      
+
+
+
+
+
+
+5. Pablo Zabaleta

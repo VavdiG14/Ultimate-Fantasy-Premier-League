@@ -1,0 +1,10 @@
+-------GOLI---------
+HUD
+Laurent Depoitre 46'
+-------ASISTENCE----------
+Abdelhamid Sabiri 46'
+-------GOLI---------
+LEI
+Jamie Vardy 50' (pen)
+label.penalty.scored
+-------ASISTENCE----------

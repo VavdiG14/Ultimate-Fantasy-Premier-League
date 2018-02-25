@@ -1,0 +1,15 @@
+-------GOLI---------
+WAT
+-------ASISTENCE----------
+-------GOLI---------
+MCI
+Sergio Agüero 27', 31', 81'
+Gabriel Jesus 37'
+Nicolás Otamendi 63'
+Raheem Sterling 89' (pen)
+label.penalty.scored
+-------ASISTENCE----------
+Kevin De Bruyne 27'
+David Silva 31', 63'
+Sergio Agüero 37'
+Kyle Walker 81'

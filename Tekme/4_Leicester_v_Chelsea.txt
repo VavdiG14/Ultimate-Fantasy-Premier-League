@@ -1,0 +1,370 @@
+Kasper Schmeichel
+Christian Fuchs
+Harry Maguire
+Danny Simpson
+Wes Morgan
+Marc Albrighton
+                        
+
+45'
+Riyad Mahrez
+Wilfred Ndidi
+Matty James
+                        
+
+78'
+Islam Slimani
+                        
+
+45'
+Jamie Vardy
+Ben Hamer
+Ben Chilwell
+Daniel Amartey
+Demarai Gray
+                        
+
+45'
+Andy King
+                        
+
+45'
+Kelechi Iheanacho
+                        
+
+78'
+Leonardo Ulloa
+-----------------
+Thibaut Courtois
+Antonio Rüdiger
+David Luiz
+César Azpilicueta
+Marcos Alonso
+N'Golo Kanté
+Tiemoué Bakayoko
+Victor Moses
+                        
+
+74'
+Álvaro Morata
+Pedro
+                        
+
+63'
+Cesc Fàbregas
+                        
+
+78'
+Willy Caballero
+Davide Zappacosta
+                        
+
+74'
+Andreas Christensen
+Eden Hazard
+                        
+
+78'
+Daniel Drinkwater
+Willian
+                        
+
+63'
+Michy Batshuayi
+------DOMACI ----------
+-------GOLI---------
+Leicester City
+LEI
+Jamie Vardy 62' (pen)
+                
+label.penalty.scored
+-------ASISTENCE----------
+
+-------POTEK TEKME--------
+Substitution45Mins
+
+
+
+45'SubstitutionSubstitution
+
+
+
+    LEI
+  
+0 - 1
+
+    CHE
+      
+
+
+
+
+
+
+11. Marc Albrighton
+          Substitution Off
+
+
+
+
+
+
+10. Andy King
+          Substitution On
+Substitution45Mins
+
+
+
+45'SubstitutionSubstitution
+
+
+
+    LEI
+  
+0 - 1
+
+    CHE
+      
+
+
+
+
+
+
+19. Islam Slimani
+          Substitution Off
+
+
+
+
+
+
+7. Demarai Gray
+          Substitution On
+label.penalty.scored62Mins
+
+
+
+62'Goallabel.penalty.scored
+
+
+
+    LEI
+  
+1 - 2
+
+    CHE
+      
+
+
+
+
+
+
+9. Jamie Vardy
+Substitution78Mins
+
+
+
+78'SubstitutionSubstitution
+
+
+
+    LEI
+  
+1 - 2
+
+    CHE
+      
+
+
+
+
+
+
+22. Matty James
+          Substitution Off
+
+
+
+
+
+
+8. Kelechi Iheanacho
+          Substitution On
+Yellow Card84Mins
+
+
+
+84'Yellow CardYellow Card
+
+
+
+    LEI
+  
+1 - 2
+
+    CHE
+      
+
+
+
+
+
+
+25. Wilfred Ndidi
+----GOSTJE ---------
+-------GOLI---------
+Chelsea
+CHE
+Álvaro Morata 41'
+                
+Goal
+
+
+
+N'Golo Kanté 50'
+                
+Goal
+-------ASISTENCE----------
+César Azpilicueta 41'
+          
+
+Antonio Rüdiger 50'
+-------POTEK TEKME--------
+Goal41Mins
+
+
+
+41'GoalGoal
+
+
+
+    LEI
+  
+0 - 1
+
+    CHE
+      
+
+
+
+
+
+
+9. Álvaro Morata
+
+Ast. César Azpilicueta
+Goal50Mins
+
+
+
+50'GoalGoal
+
+
+
+    LEI
+  
+0 - 2
+
+    CHE
+      
+
+
+
+
+
+
+7. N'Golo Kanté
+
+Ast. Antonio Rüdiger
+Substitution63Mins
+
+
+
+63'SubstitutionSubstitution
+
+
+
+    LEI
+  
+1 - 2
+
+    CHE
+      
+
+
+
+
+
+
+11. Pedro
+          Substitution Off
+
+
+
+
+
+
+22. Willian
+          Substitution On
+Substitution74Mins
+
+
+
+74'SubstitutionSubstitution
+
+
+
+    LEI
+  
+1 - 2
+
+    CHE
+      
+
+
+
+
+
+
+15. Victor Moses
+          Substitution Off
+
+
+
+
+
+
+21. Davide Zappacosta
+          Substitution On
+Substitution78Mins
+
+
+
+78'SubstitutionSubstitution
+
+
+
+    LEI
+  
+1 - 2
+
+    CHE
+      
+
+
+
+
+
+
+4. Cesc Fàbregas
+          Substitution Off
+
+
+
+
+
+
+10. Eden Hazard
+          Substitution On
