@@ -89,7 +89,23 @@
                         </div>
                         <h3>PREMIER LEAGUE</h3>
                         <p class="description"> Lestvica </p>
-
+                        <table id="lestvica" class="display" cellspacing="0" align="center">
+                  <thead>
+                    <tr>
+                        <th>Ekipa</th>
+                        <th>Točke</th>
+                    </tr>
+                  </thead>
+                  </tfoot>
+                  <tbody>
+                  %for ekipa,tocke in lestvica:
+                  <tr>
+                      <td>{{ekipa}}</td>
+                    <td> {{tocke}} </td>
+                  </tr>
+                  %end
+                  </tbody>
+                </table>
                     </div>
                 </div>
                 <div class="col-md-4">
@@ -107,7 +123,7 @@
                             <i class="pe-7s-gleam"></i>
                         </div>
                         <h3>FANTASY</h3>
-                         <table id="example" class="display" cellspacing="0" align="center">
+                         <table id="nakoristnejsiI" class="display" cellspacing="0" align="center">
                   <thead>
                     <tr>
                         <th>Igralec</th>
@@ -153,7 +169,14 @@
 <script>
         $(document).ready(function() {
             $('#nakoristnejsiI').DataTable({
-                searching: false, paging: false
+                searching: false, paging: false,
+                 "order": [[ 1, 'desc' ]]
+            })
+    });
+        $(document).ready(function() {
+            $('#lestvica').DataTable({
+                searching: false, paging: false,
+                 "order": [[ 1, 'desc' ]]
             })
     });
 </script>

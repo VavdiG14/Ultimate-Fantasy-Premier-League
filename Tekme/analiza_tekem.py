@@ -191,7 +191,7 @@ import sqlite3
 
 baza = "Premier_Leauge.db"
 
-for i in range(22402, 22412):
+for i in range(22452, 22462):
     print(i)
     krog, vhodna, gol, asistenca, rdeci = izberiTekmo(str(i))
     strelci, podajalci, rezultat = vSlovar(gol, asistenca)
@@ -201,7 +201,7 @@ for i in range(22402, 22412):
     id_gost = list(rezultat.keys())[1]
     goli_d = rezultat[id_dom]
     goli_g = rezultat[id_gost]
-    print(rezultat)
+    #print(rezultat)
     with sqlite3.connect(baza) as con:
         cur = con.cursor()  # "odzivnik" za pregledovanje poizvedbe
         cur.execute("INSERT INTO Tekma VALUES ({0}, 0, {1}, '{2}', '{3}', {4}, {5})".format(i, krog, id_dom, id_gost, goli_d, goli_g))
@@ -224,6 +224,6 @@ for i in range(22402, 22412):
             id_i = cur.fetchone()
             if id_i is None:
                 continue
-            print(id_i[0])
-            print(k)
+            #print(id_i[0])
+            #print(k)
             cur.execute("INSERT INTO  Dogodki VALUES ({0},{1},{2},{3},{4},{5},{6},{7},{8},0,0,{9},{10})".format(i, id_i[0], krog, k.g, k.a, k.rumeniK, k.rdeciK,int(cleanSheet), k.m, k.og, prejeti))
