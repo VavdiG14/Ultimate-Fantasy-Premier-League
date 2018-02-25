@@ -48,8 +48,8 @@ def prijava():
     username = request.forms.get('username')
     password = request.forms.get('password')
     if preveriPrijavo(username,password)[0]:
+        response.set_cookie("racun", username, secret='some-secret-key1')
         if preveriPrijavo(username,password)[1] is None:    #ko se prijaviš pogleda ali je stolpec ekipa prazen, #  če je te vrže na izberiIgralce, drugače na mojteam
-            response.set_cookie("racun", username, secret='some-secret-key1')
             return redirect('izberiEkipo')
         else:
             return redirect('myTeam')
@@ -64,23 +64,44 @@ def sestaviEkipo():
     igralci = request.forms.getall('gk')
     print(igralci, username)
     shraniEkipo(list(map(int,igralci)), username)
-    return redirect('/myTeam' )
+    return redirect('/myTeam')
 
 @get('/myTeam')
 def myTeam():
     username = request.get_cookie("racun", secret='some-secret-key1')
     print(username)
     if username:
-        uporabnik = poisciUporabnika(username)
-        print(uporabnik)
-        golmani,obramba,zvezna,napadalci = postaviIgralce(uporabnik[0][1])
-        return template('myTeam.html', ime_ekipe=uporabnik[0][0], golmani=golmani,
+        ime_ekipe, ekipa, tocke_skupaj, tocke_krog, tocke_krog_nazaj, krog = poisciUporabnika(username)[0]
+        print(tocke_krog_nazaj)
+        if tocke_krog_nazaj != 'None':
+            seznamTock = list(map(int,tocke_krog_nazaj.split(',')))
+        else:
+            seznamTock = None
+        golmani,obramba,zvezna,napadalci = postaviIgralce(ekipa)
+        return template('myTeam.html', ime_ekipe=ime_ekipe, golmani=golmani,
                     obramba=obramba,
                     sredina=zvezna,
-                    napad=napadalci)
+                    napad=napadalci,
+                    seznamIgralcev = ekipa,
+                    seznamTock=seznamTock,
+                    tocke_krog=tocke_krog,
+                    tocke_skupaj=tocke_skupaj,
+                    krog=krog)
     else:
         return redirect('prijava')
 
+@post('/krog')
+def izracunajKrog():
+    username = request.get_cookie("racun", secret='some-secret-key1')
+    igralci = request.forms.getall('mojih11')
+    izbrani = list(map(int,igralci))
+    print(igralci)
+    if username:
+        uporab = poisciUporabnika(username)[0]
+        krog = uporab[-1]
+        seznamTock,vsota = nastaviTocke(krog,izbrani)
+        posodobiBazo(seznamTock, vsota,krog,username)
+        return redirect('/myTeam')
 
 @post('/register')
 def registriraj():

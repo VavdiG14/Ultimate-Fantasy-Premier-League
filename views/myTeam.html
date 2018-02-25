@@ -31,105 +31,136 @@
                     {{ime_ekipe}}
                 </h2>
                 <div class="separator separator-danger">∎</div>
+                <p class="descripton">
+                    Tukaj pride navodilo.
+                </p>
             </div>
-             <div style="width:100%">
-              <div style="float:left; width:60%;" >
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="info-icon">
+                        <div class="icon text-danger">
+                            <i class="pe-7s-add-user"></i>
+                        </div>
+                        <h3>REZERVE </h3>
+                        <h3 id="pisi"></h3>
+                    </div>
+                </div>
+                  <div class="col-md-3">
+                    <div class="info-icon">
+                        <div class="icon text-danger">
+                            <i class="pe-7s-date"></i>
+                        </div>
+                        <h3>KROG </h3>
+                        <h3>{{krog}} </h3>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="info-icon">
+                        <div class="icon text-danger">
+                            <i class="pe-7s-piggy"></i>
+                        </div>
+                            <h3>VSE TOČKE: </h3>
+                        <h3 >{{tocke_skupaj}} </h3>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="info-icon">
+                        <div class="icon text-danger">
+                            <i class="pe-7s-piggy"></i>
+                        </div>
+                            <h3>TOČKE KROG: </h3>
+                        <h3 >{{tocke_krog}} </h3>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="info-icon">
+                        <div id="naslednjiKrog" class="icon text-danger">
+                            <i class="pe-7s-angle-right-circle"></i>
+                            <h3>IGRAJ KROG </h3>
+                            <p class="description"> Tukaj pride besedilo</p>
+                    </div>
+                </div>
+             </div>
             <div class="row">
         <div class="col-lg-12">
         </div>
-               %for i in golmani:
-        <div class="col-lg-6 col-sm-6 text-center mb-4">
-          <img class="rounded-circle img-fluid d-block mx-auto" src="http://placehold.it/50x50" alt="">
-          <h3>{{i[0]}}
+               %for s,i in enumerate(golmani):
+        <div class="col-lg-6 col-sm-6 text-center mb-7">
+          <img class="rounded-circle img-fluid d-block mx-auto" src={{i[3]}} alt="">
+          <h4>{{i[0]}}
               <br>
             <small>{{i[1]}}</small>
-          </h3>
-          <p>0</p>
+          </h4>
+             %if seznamTock is None:
+                <p>0</p>
+            %else:
+                <p>{{seznamTock[s]}}</p>
+            %end
+            <div>
+                <input type="checkbox" name="golman" value=1 id={{s}}>
+                <label>Rezerva</label>
+            </div>
         </div>
                 %end
             </div>
-                               <div class="row">
-                %for j in obramba:
+
+          <div class="row">
+                %for s,j in enumerate(obramba):
 
         <div class="col-lg-2 col-sm-2 text-center mb-4">
-          <img class="rounded-circle img-fluid d-block mx-auto" src="http://placehold.it/50x50" alt="">
-          <h3>{{j[0]}}
+          <img class="rounded-circle img-fluid d-block mx-auto" src={{j[3]}} alt="">
+          <h4>{{j[0]}}
             <br>
             <small>{{j[1]}}</small>
-          </h3>
-          <p>Točke: 0</p>
-            <div class="checkbox">
-                <label><input type="checkbox" value="1">Rezerva</label>
-            </div>
+          </h4>
+                %if seznamTock is None:
+                     <p>0</p>
+                %else:
+                    <p>{{seznamTock[s+2]}}</p>
+                %end
+                <label><input type="checkbox" value="1" id={{s+2}}>Rezerva</label>
         </div>
                 %end
                            </div>
-                %for m in sredina:
+                %for st, m in enumerate(sredina):
         <div class="col-lg-2 col-sm-2 text-center mb-4">
-          <img class="rounded-circle img-fluid d-block mx-auto" src="http://placehold.it/50x50" alt="">
-          <h3>{{m[0]}}
+          <img class="rounded-circle img-fluid d-block mx-auto" src= {{m[3]}} alt="">
+          <h4>{{m[0]}}
             <br>
             <small>{{m[1]}}</small>
-          </h3>
-          <p>0</p>
+          </h4>
+                    %if seznamTock is None:
+                            <p>0</p>
+                    %else:
+                        <p>{{seznamTock[st+7]}}</p>
+                    %end
+              <label><input type="checkbox" value="1" id={{st+7}}>Rezerva</label>
         </div>
                  %end
-                %for n in napad:
-        <div class="col-lg-4 col-sm-4 text-center mb-4">
-          <img class="rounded-circle img-fluid d-block mx-auto" src="http://placehold.it/50x50" alt="">
-          <h3>{{n[0]}}
+
+                %for s1,n in enumerate(napad):
+        <div class="col-lg-4 col-sm-2 text-center mb-4">
+          <img class="rounded-circle img-fluid d-block mx-auto" src={{n[3]}} alt="">
+          <h4>{{n[0]}}
             <br>
             <small>{{n[1]}}</small>
-          </h3>
-          <p>0</p>
+          </h4>
+                    %if seznamTock is None:
+                        <p>0</p>
+                    %else:
+                        <p>{{seznamTock[s1+12]}}
+                    %end
+              <label><input type="checkbox" value="1" id={{s1+12}}>Rezerva</label>
         </div>
                  %end
-              </div>
-                 <div style="float:left; width:40%;">
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="info-icon">
-                        <div class="icon text-danger">
-                            <i class="pe-7s-users"></i>
-                        </div>
-                        <h3>KROG </h3>
-                        <h3> 1 </h3>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="info-icon">
-                        <div class="icon text-danger">
-                            <i class="pe-7s-piggy"></i>
-                        </div>
-                            <h3>DOSEŽENE TOČKE </h3>
-                        <h3 >0 </h3>
-                    </div>
-                </div>
-             </div>
-                    <div class="row">
-                <div class="col-md-4">
-                    <div class="info-icon">
-                        <div class="icon text-danger">
-                            <i class="pe-7s-users"></i>
-                        </div>
-                        <h3>KROG </h3>
-                        <h3> 1 </h3>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="info-icon">
-                        <div class="icon text-danger">
-                            <i class="pe-7s-piggy"></i>
-                        </div>
-                            <h3>SEŠTEVEK VSEH TOČK SKUPAJ </h3>
-                        <h3 >0 </h3>
-                    </div>
-                </div>
-             </div>
+        </div>
                  </div>
                  </div>
              </div>
         </div>
+
+
+<form id="form" action="/krog" method="POST"></form>
 </div>
 
 
@@ -148,5 +179,40 @@
 <script type="text/javascript" src="assets/js/gaia.js"></script>
 <script src="assets/js/main.js"></script>
 
+
+<script>
+    var rezerve = [];
+  var countChecked = function() {
+    var n = $( "input:checked" ).length;
+    $( "#pisi" ).text( n  + " izbranih!" );
+};
+countChecked();
+
+$( "input[type=checkbox]" ).on( "click", countChecked );
+
+$('#naslednjiKrog').click( function () {
+    var rez = [];
+    $("input:checked").each(function () {
+        var id = $(this).attr("id");
+        rez.push(id)
+    });
+    var igralci = {{!seznamIgralcev}};
+    for (i=0; i < rez.length; i++){
+        igralci[rez[i]] = 0;
+    }
+    form = $('#form');
+        form.empty();
+        for (i=0; i < igralci.length; i++) {
+            form.append($('<input>').attr({
+                type: 'hidden',
+                name: 'mojih11',
+                value:igralci[i]
+            }));
+        }
+        form.submit();
+    //Po možnosti dodaj alert, če je dolžina seznama različna od 4
+})
+
+</script>
 
 </html>

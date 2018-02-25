@@ -217,12 +217,35 @@ def postaviIgralce(string):
     sez1 = list(map(int, sez.split(",")))
     for i in sez1:
         igralec = poisciIgralca(i)
+        print(igralec)
         if igralec[0][2] == 'GK':
-            gk.append(igralec[0])
+            gk.append((igralec[0][0], igralec[0][1], igralec[0][2], "/assets/img/dres_{0}.png".format(igralec[0][1])))
         elif igralec[0][2] == 'DEF':
-            def1.append(igralec[0])
+            def1.append((igralec[0][0], igralec[0][1], igralec[0][2], "/assets/img/dres_{0}.png".format(igralec[0][1])))
         elif igralec[0][2] == 'MID':
-            mid.append(igralec[0])
+            mid.append((igralec[0][0], igralec[0][1], igralec[0][2], "/assets/img/dres_{0}.png".format(igralec[0][1])))
         else:
-            fwd.append(igralec[0])
+            fwd.append((igralec[0][0], igralec[0][1], igralec[0][2], "/assets/img/dres_{0}.png".format(igralec[0][1])))
     return (gk,def1,mid,fwd)
+
+def nastaviTocke(krog,izbranih):
+    tocke1 = []
+    for i in izbranih:
+        if i == 0:
+            tocke1.append(0)
+            continue
+        with sqlite3.connect(baza) as con:
+            cur = con.cursor()
+            cur.execute("SELECT tocke FROM Tocke WHERE id_igralca = '{0}' AND krog = '{1}'".format(i,krog))
+            a = cur.fetchall()
+            tocke1.append(a[0][0])
+    vsota = sum(tocke1)
+    return (tocke1,vsota)
+
+def posodobiBazo(seznamTock, vsota,krog,username):
+    b = ','.join(str(e) for e in seznamTock)
+    with sqlite3.connect(baza) as con:
+        cur = con.cursor()
+        cur.execute("UPDATE Uporabnik SET tocke_krog_nazaj = '{3}', tocke_krog = {0}, krog = '{1}', "
+                    "tocke_skupaj = tocke_skupaj + {0} WHERE uporabnisko_ime = '{2}'".format(vsota, str(int(krog)+1), username,b ))
+    return
