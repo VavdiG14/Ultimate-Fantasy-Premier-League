@@ -35,7 +35,7 @@ def shraniUporabnika(username, email, team, password):
 
     with sqlite3.connect(baza) as con:
         cur = con.cursor()
-        cur.execute("INSERT INTO Uporabnik VALUES('{0}', '{1}', '{2}', '{3}','None', 0,0, 'None',1)".format(username, hashing(password), email, team))
+        cur.execute("INSERT INTO Uporabnik VALUES(NULL ,'{0}', '{1}', '{2}', '{3}','None', 0,0, 'None',1)".format(username, hashing(password), email, team))
     return
 
 
@@ -44,12 +44,14 @@ def shraniUporabnika(username, email, team, password):
 def preveriPrijavo(username,password):
     with sqlite3.connect(baza) as con:
         cur = con.cursor()
-        cur.execute("SELECT uporabnisko_ime,geslo,ekipa FROM Uporabnik WHERE uporabnisko_ime = '{0}'".format(username))
+        cur.execute("SELECT id_igralca FROM Ekipa WHERE id_uporabnika = (SELECT id_uporabnika FROM Uporabnik WHERE uporabnisko_ime = '{0}')".format(username))
+        b = cur.fetchall()
+        cur.execute("SELECT uporabnisko_ime,geslo FROM Uporabnik WHERE uporabnisko_ime = '{0}'".format(username))
         a = cur.fetchall()
         print(a)
         if a != []:
             if a[0][1] == hashing(password):
-                if a[0][2] == 'None':
+                if b == []:
                     return (True, None)
                 else:
                     return (True, "")
@@ -70,16 +72,20 @@ def lestvica():
         cur.execute("SELECT ime,tocke FROM Lestvica ORDER BY tocke DESC")
         return cur.fetchall()
 
-def shraniEkipo(string, uporabnik):
+def shraniEkipo(seznam, username):
     with sqlite3.connect(baza) as con:
         cur = con.cursor()
-        cur.execute("UPDATE Uporabnik SET ekipa = '{0}' WHERE uporabnisko_ime ='{1}'".format(string, uporabnik))
+        cur.execute("SELECT id_uporabnika FROM Uporabnik WHERE uporabnisko_ime ='{0}'".format(username))
+        id_uporabnika = int(cur.fetchall()[0][0])
+        print(id_uporabnika, seznam)
+        for i in seznam:
+            cur.execute("INSERT INTO Ekipa VALUES({0}, {1})".format(id_uporabnika, int(i)))
     return
 
 def poisciUporabnika(username):
     with sqlite3.connect(baza) as con:
         cur = con.cursor()
-        cur.execute("SELECT ime_ekipe,ekipa, tocke_skupaj, tocke_krog, tocke_krog_nazaj, krog FROM Uporabnik WHERE uporabnisko_ime = '{0}'".format(username))
+        cur.execute("SELECT ime_ekipe, tocke_skupaj, tocke_krog, krog FROM Uporabnik WHERE uporabnisko_ime = '{0}'".format(username))
         return cur.fetchall()
 
 def poisciIgralca(id):
@@ -88,16 +94,20 @@ def poisciIgralca(id):
         cur.execute("SELECT ime, klub, pozicija FROM Igralci WHERE id_igralca = {0}".format(id))
         return cur.fetchall()
 
-def postaviIgralce(string):
+def poisiciEkipo(username):
+    with sqlite3.connect(baza) as con:
+        cur = con.cursor()
+        cur.execute("SELECT id_igralca FROM Ekipa WHERE id_uporabnika = "
+                    "(SELECT id_uporabnika FROM Uporabnik WHERE uporabnisko_ime ='{0}')".format(username))
+    return cur.fetchall()
+
+def postaviIgralce(seznam):
     gk = []
     def1 = []
     mid = []
     fwd = []
-    sez = string[1:-1]
-    sez1 = list(map(int, sez.split(",")))
-    for i in sez1:
-        igralec = poisciIgralca(i)
-        print(igralec)
+    for i in seznam:
+        igralec = poisciIgralca(i[0])
         if igralec[0][2] == 'GK':
             gk.append((igralec[0][0], igralec[0][1], igralec[0][2], "/assets/img/dres_{0}.png".format(igralec[0][1])))
         elif igralec[0][2] == 'DEF':
@@ -108,29 +118,47 @@ def postaviIgralce(string):
             fwd.append((igralec[0][0], igralec[0][1], igralec[0][2], "/assets/img/dres_{0}.png".format(igralec[0][1])))
     return (gk,def1,mid,fwd)
 
-def nastaviTocke(krog,izbranih):
-    tocke1 = []
-    for i in izbranih:
-        if i == 0:
-            tocke1.append(0)
-            continue
-        with sqlite3.connect(baza) as con:
-            cur = con.cursor()
-            cur.execute("SELECT tocke FROM Tocke WHERE id_igralca = '{0}' AND krog = '{1}'".format(i,krog))
-            a = cur.fetchall()
-            if a == []:
-                tocke1.append(0)
-            else:
-                tocke1.append(a[0][0])
-    vsota = sum(tocke1)
-    return (tocke1,vsota)
 
-def posodobiBazo(seznamTock, vsota,krog,username):
-    b = ','.join(str(e) for e in seznamTock)
+def nastaviTocke(krog,izbranih, username):
+    sez = []
     with sqlite3.connect(baza) as con:
         cur = con.cursor()
-        cur.execute("UPDATE Uporabnik SET tocke_krog_nazaj = '{3}', tocke_krog = {0}, krog = '{1}', "
-                    "tocke_skupaj = tocke_skupaj + {0} WHERE uporabnisko_ime = '{2}'".format(vsota, str(int(krog)+1), username,b ))
+        cur.execute("SELECT Tocke.id_igralca, Tocke.tocke FROM Ekipa INNER JOIN Tocke ON (Tocke.id_igralca = Ekipa.id_igralca) "
+                    "WHERE krog = '{0}' AND id_uporabnika = (SELECT id_uporabnika FROM Uporabnik WHERE uporabnisko_ime ='{1}')".format(krog,username))
+        seznamTock = cur.fetchall()
+    print(seznamTock)
+    print("SPDaj")
+    #premisli
+
+    return (sez, sum(vsota))
+
+def posodobiBazo1(seznamTock,krog, username ):
+    with sqlite3.connect(baza) as con:
+        cur = con.cursor()
+        cur.execute("SELECT id_uporabnika FROM Uporabnik WHERE uporabnisko_ime ='{0}'".format(username))
+        user = cur.fetchall()[0][0]
+    for id_igralca, tocke in seznamTock:
+        with sqlite3.connect(baza) as con:
+            cur = con.cursor()
+            cur.execute(" INSERT INTO Odigran_krog VALUES({1},{2}"
+                        ",'{0}', {3})".format(krog, id_igralca, user, tocke))
+    return
+
+def poisciTocke(username,krog):
+    with sqlite3.connect(baza) as con:
+        cur = con.cursor()
+        cur.execute("SELECT id_uporabnika FROM Uporabnik WHERE uporabnisko_ime ='{0}'".format(username))
+        user = cur.fetchall()[0][0]
+        cur.execute("SELECT id_igralca, tocke FROM Odigran_krog WHERE krog = {0} AND id_uporabnika = {1}".format(krog,user))
+        return cur.fetchall()
+
+
+
+def posodobiBazo(vsota,krog,username):
+    with sqlite3.connect(baza) as con:
+        cur = con.cursor()
+        cur.execute("UPDATE Uporabnik SET tocke_krog = {0}, krog = '{1}', "
+                    "tocke_skupaj = tocke_skupaj + {0} WHERE uporabnisko_ime = '{2}'".format(vsota, str(int(krog)+1), username))
     return
 
 def pregledKroga(krog):

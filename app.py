@@ -64,27 +64,37 @@ def prijava():
 @post('/ekipa')
 def sestaviEkipo():
     username = request.get_cookie("racun", secret='some-secret-key1')
-    igralci = request.forms.getall('gk')
-    print(igralci, username)
-    shraniEkipo(list(map(int,igralci)), username)
-    return redirect('/myTeam')
+    if username:
+        igralci = request.forms.getall('gk')
+        print(igralci, username)
+        shraniEkipo(list(map(int,igralci)), username)
+        return redirect('/myTeam')
+    else:
+        return redirect('/')
 
 def spremeni(tupl):
     izid = str(tupl[1])+ " : " + str(tupl[2])
     return (tupl[-1],tupl[0], izid, tupl[3])
 
+def spremeniSeznam(seznam):
+    sez = []
+    for i in seznam:
+        sez.append(i[0])
+    return sez
+
 @get('/myTeam')
 def myTeam():
     username = request.get_cookie("racun", secret='some-secret-key1')
-    print(username)
     if username:
-        ime_ekipe, ekipa, tocke_skupaj, tocke_krog, tocke_krog_nazaj, krog = poisciUporabnika(username)[0]
-        print(tocke_krog_nazaj)
-        if tocke_krog_nazaj != 'None':
-            seznamTock = list(map(int,tocke_krog_nazaj.split(',')))
-        else:
+        ekipa = poisiciEkipo(username)
+        ime_ekipe, tocke_skupaj, tocke_krog, krog = poisciUporabnika(username)[0]
+        print(krog)
+        if krog == 1:
             seznamTock = None
+        else:
+            seznamTock = spremeniSeznam(poisciTocke(username, krog))
         golmani,obramba,zvezna,napadalci = postaviIgralce(ekipa)
+        print(seznamTock)
         if int(krog) <= 1:
             tekme = None
         else:
@@ -94,8 +104,8 @@ def myTeam():
                     obramba=obramba,
                     sredina=zvezna,
                     napad=napadalci,
-                    seznamIgralcev = ekipa,
-                    seznamTock=seznamTock,
+                    seznamIgralcev = spremeniSeznam(ekipa),
+                    seznamTock =seznamTock,
                     tocke_krog=tocke_krog,
                     tocke_skupaj=tocke_skupaj,
                     krog=krog,
@@ -113,8 +123,9 @@ def izracunajKrog():
     if username:
         uporab = poisciUporabnika(username)[0]
         krog = uporab[-1]
-        seznamTock,vsota = nastaviTocke(krog,izbrani)
-        posodobiBazo(seznamTock, vsota,krog,username)
+        seznamTock,vsota = nastaviTocke(krog,izbrani,username)
+        posodobiBazo1(seznamTock, krog, username)
+        posodobiBazo(vsota,krog,username)
         return redirect('/myTeam')
 
 @post('/register')

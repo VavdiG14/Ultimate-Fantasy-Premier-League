@@ -31,7 +31,20 @@
                 <div class="title-area">
                     <h2>NAVODILO</h2>
                     <div class="separator separator-danger">✻</div>
-                    <p class="description">Postati želimo vodilni center znanja in referenčna točka za podporo ter pospeševanje mednarodnega gospodarskega sodelovanja. S svojo raziskovalno dejavnostjo, ki izhaja iz predpostavke, da sta politika in družba tisti, ki v največji meri vplivata na gospodarski razvoj, in strokovnim svetovanjem želimo podjetjem nuditi podporo ob njihovem vstopu na tuje trge in spodbujati razvoj podjetništva ter trajnostni razvoj.</p>
+                    <p class="description"> Pozdravljen, najprej si moraš ustvariti ekipo. Pri tem pazi na pogoje saj lahko izbereš:
+                                    <ul class = "description">
+                                    <li> 2 vratarja (GK)</li>
+                                    <li> 5 obrambnih (DEF)</li>
+                                    <li> 5 zveznih    (MID)</li>
+                                    <li>  3 napadalcev (FWD)</li>
+                                    <li>  in več kot 3 igralci ne smejo biti iz enake ekipe. (FWD)</li>
+                                </ul>
+                </p>
+                    <p class="description">
+                    Pri tem pa ne smeš zapraviti več kot 100 enot denarja.
+                    <br>
+                    Ko si zadovoljen z ekipo pritisni naprej! :)
+                    </p>
                 </div>
             </div>
             <div class="row">
@@ -51,25 +64,25 @@
                         </div>
                             <h3>CENA </h3>
                         <h3 id="trenutnaCena"> </h3>
-                        </a>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div id="naprej1" class="col-md-4">
+                    <a>
                     <div class="info-icon">
                         <div id="naprej" class="icon text-danger">
                             <i class="pe-7s-angle-right-circle"></i>
                         </div>
-                            <h3>Naprej </h3>
-                            <p class="description">Ko si zadovoljen z ekipo, pritisni naprej.</p>
-                        </a>
-                        </p>
+                            <h3>NAPREJ </h3>
                     </div>
+                        </a>
                 </div>
             </div>
         </div>
+     <div id ="opozorilo" align="center" style="width:500px;margin-left:500px;"> </div>
+     <div id ="opozorilo1" align="center" style="width:500px;margin-left:500px;"> </div>
      <div class="container" style="margin-top:100px;">
          <div style="width:100%">
-              <div style="float:left; width:50%">
+              <div style="float:left; width:40%">
             <table id="example" class="display" cellspacing="0" >
                   <thead>
                     <tr>
@@ -102,7 +115,7 @@
                   </tbody>
                 </table>
             </div>
-              <div  style="float:left; width:50%">
+              <div  style="float:left; width:50%;margin-left: 80px;">
         <table id="example1" class="display" cellspacing="0" >
               <thead>
                 <tr>
@@ -125,8 +138,10 @@
               <tbody>
               </tbody>
         </table>
+                  <button id="button"> Izbriši</button>
+              </div>
     </div>
-            <button id="button"> Delete</button>
+
 </div>
  </div>
  </div>
@@ -136,6 +151,7 @@
   <script>
       $(document).ready(function() {
         $('#example1').DataTable( {
+            searching: false, paging: false,
         "columnDefs": [
                 {
                     "targets": [ 0 ],
@@ -186,6 +202,12 @@
 
      document.getElementById('steviloIg').innerHTML = String(st_igralcev) + "/15";
      document.getElementById('trenutnaCena').innerHTML = String(cena);
+     var opozoriloG = '<div class="alert alert-warning"> <strong>Pazi!</strong>  Na tej poziciji so vsa mesta že zapolnjena.Če želiš lahko izbrišeš enega in potem dodaš novega.</div>';
+     var opozoriloNaprej = '<div class="alert alert-danger"> <strong>Napaka!</strong>   Cena je manjša od 0 ali pa število igralcev ne ustreza.</div>';
+     $('#opozorilo').append(opozoriloG);
+     $('#opozorilo').hide();
+     $('#opozorilo1').append(opozoriloNaprej);
+      $('#opozorilo1').hide();
     $('#example tbody').on( 'click', 'tr', function () {
         if ( $(this).hasClass('selected') ) {
             $(this).removeClass('selected');
@@ -201,8 +223,25 @@
             var ime_igralca =$(this).closest('tr').find('td:nth-last-child(4)').text();
             const result = ekipe.filter(i => i === klub_igralca).length; //preveri koliko igralcev iz ene ekipe
             var inG = $.inArray(id_igralca, seznam_igralcev);
-            if (result > 2 || inG !== -1 || golmani.length > 2 || defender.length > 5  || mid.length > 5 || fwd.length > 3){
+            if (result > 2 || inG != -1 ){
                  $(this).removeClass('selected');
+            }
+            else if (poz_igralca == "GK" && golmani.length >= 2){
+                 $('#opozorilo').show();
+                $(this).removeClass('selected');
+
+            }
+            else if (poz_igralca == "DEF" && defender.length >= 5){
+                 $('#opozorilo').show();
+                $(this).removeClass('selected');
+            }
+            else if (poz_igralca == "MID" && mid.length >= 5){
+                 $('#opozorilo').show();
+                $(this).removeClass('selected');
+            }
+            else if (poz_igralca == "FWD" && fwd.length >= 5){
+                 $('#opozorilo').show();
+                $(this).removeClass('selected');
             }
             else {
                 //TODO: 2 golmana, 5 branilcev, 5 mid, 3 fwd
@@ -225,6 +264,8 @@
                 document.getElementById('steviloIg').innerHTML = String(st_igralcev) + "/15";
                 document.getElementById('trenutnaCena').innerHTML = String(cena);
                 ekipe.push(klub_igralca);
+                $('#opozorilo').hide();
+                 $('#opozorilo1').hide();
                 debugger
             }
         }
@@ -274,7 +315,7 @@
          debugger
     } );
     $('#naprej').click( function () {
-        form = $('#form');
+        if (cena >= 0 && seznam_igralcev.length == 15){form = $('#form');
         form.empty();
         for (i=0; i < seznam_igralcev.length; i++) {
             form.append($('<input>').attr({
@@ -284,6 +325,11 @@
             }));
         }
         form.submit();
+        }
+        else{
+            $('#opozorilo1').show();
+        }
+
     } );
 } );
 

@@ -139,6 +139,7 @@ a {
 a:hover {
   color: #777777;
   opacity: 1;
+
 }
 
 
@@ -238,7 +239,10 @@ p.description {
   font-size: 16px;
   color: #777777;
 }
-
+ul.description {
+  font-size: 16px;
+  color: #777777;
+}
 a:hover, a:focus {
   text-decoration: none;
 }
@@ -3724,4 +3728,3 @@ body {
     padding: 0;
   }
 }
-
