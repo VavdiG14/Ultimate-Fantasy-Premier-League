@@ -5,6 +5,8 @@ from bottle import route, run, static_file, template, view,get,post,request,redi
 from model import *
 
 
+
+
 # Static Routes
 @get("/assets/css/<filepath:re:.*\.css>")
 def css(filepath):

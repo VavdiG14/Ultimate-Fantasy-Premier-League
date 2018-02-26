@@ -1,4 +1,5 @@
 import sqlite3
+import hashlib
 
 #Pomožne funkcije s iskanjem SQL
 
@@ -8,6 +9,11 @@ baza = "Premier_Leauge.db"
 # cur = con.cursor()
 # cur.execute('PRAGMA foreign keys=ON')
 
+def hashing(password):
+    b = str.encode(password)
+    hash_object = hashlib.sha256(b)
+    hex_dig = hash_object.hexdigest()
+    return hex_dig
 
 
 #TODO: uredi nekaj glede posodabljanja tabele Dogodki
@@ -26,9 +32,10 @@ def preveriPristnost(username, email, team, password):
             return (False, 'Uporabniško ime že zasedeno')
 
 def shraniUporabnika(username, email, team, password):
+
     with sqlite3.connect(baza) as con:
         cur = con.cursor()
-        cur.execute("INSERT INTO Uporabnik VALUES('{0}', '{1}', '{2}', '{3}','None', 0,0, 'None',1)".format(username, password, email, team))
+        cur.execute("INSERT INTO Uporabnik VALUES('{0}', '{1}', '{2}', '{3}','None', 0,0, 'None',1)".format(username, hashing(password), email, team))
     return
 
 
@@ -41,7 +48,7 @@ def preveriPrijavo(username,password):
         a = cur.fetchall()
         print(a)
         if a != []:
-            if a[0][1] == password:
+            if a[0][1] == hashing(password):
                 if a[0][2] == 'None':
                     return (True, None)
                 else:

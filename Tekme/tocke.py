@@ -134,6 +134,6 @@ def tockeTedna(krog1):
 
     return
 
-tockeTedna("12")
+#tockeTedna("12")
 
-rezultat("12")
+#rezultat("12")

@@ -22,7 +22,34 @@
 </head>
 
 <body>
-<div class="section section-our-clients-freebie">
+
+ <nav class="navbar navbar-default navbar-transparent navbar-fixed-top" color-on-scroll="200" style="background-color: #567a91;">
+        <!-- if you want to keep the navbar hidden you can add this class to the navbar "navbar-burger"-->
+        <div class="container">
+            <div class="navbar-header">
+                <button id="menu-toggle" type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar bar1"></span>
+                    <span class="icon-bar bar2"></span>
+                    <span class="icon-bar bar3"></span>
+                </button>
+                <a href="/" class="navbar-brand">
+                    FPL </a>
+            </div>
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav navbar-right navbar-uppercase">
+                    <li>
+                        <a href="/">Odjava</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+    </nav>
+
+
+
+<div class="section section-our-clients-freebie" style="margin-top:100px;">
         <div class="container">
             <div class="title-area">
                 <h2>
@@ -30,7 +57,12 @@
                 </h2>
                 <div class="separator separator-danger">∎</div>
                 <p class="descripton">
-                    Tukaj pride navodilo.
+                   Za vsak krog izberi 4 rezervne igralce, katerih točke se ta krog ne bodo štele. Računava na smiselno izbiro enajsterice :)
+                    <br>
+                    Po vsakem odigranem krogu se bodo pod ikono igralca pokazale točke, ki jih je dosegel v prejšnjem krogu. Pod ikonami bodo prikazane skupne točke
+                    v prejšnjem krogu, ter skupne točke vseh krogov, ki si jih odigral do sedaj. Zraven je pripisana tudi trenutna številka kroga, za katerega trenutno izbiraš ekipo.
+                    <br>
+                    Spodaj sta še dve tabeli za pomoč pri izbiranju :)
                 </p>
             </div>
             <div class="row">
@@ -55,7 +87,7 @@
                 <div class="col-md-2">
                     <div class="info-icon">
                         <div class="icon text-danger">
-                            <i class="pe-7s-piggy"></i>
+                            <i class="pe-7s-science"></i>
                         </div>
                             <h3>VSE TOČKE: </h3>
                         <h3 >{{tocke_skupaj}} </h3>
@@ -76,7 +108,6 @@
                         <div id="naslednjiKrog" class="icon text-danger">
                             <i class="pe-7s-angle-right-circle"></i>
                             <h3>IGRAJ KROG </h3>
-                            <p class="description"> Tukaj pride besedilo</p>
                     </div>
                 </div>
              </div>
