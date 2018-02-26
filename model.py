@@ -151,3 +151,10 @@ def najkoristnejsiIgralci():
         cur.execute("SELECT SUM(tocke),ime FROM Tocke INNER JOIN Igralci ON (Igralci.id_igralca = Tocke.id_igralca) "
                     "GROUP BY Tocke.id_igralca ORDER BY SUM(tocke) DESC LIMIT 10")
         return cur.fetchall()
+
+
+def lestivcaUporabnikov():
+    with sqlite3.connect(baza) as con:
+        cur = con.cursor()
+        cur.execute("SELECT uporabnisko_ime, tocke_skupaj, krog FROM Uporabnik LIMIT 10")
+        return cur.fetchall()

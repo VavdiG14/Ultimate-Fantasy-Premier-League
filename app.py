@@ -28,7 +28,8 @@ def js(filepath):
 @route("/")
 def glavniMenu():
     return template('index.html', najkoristnejsiIgralci = najkoristnejsiIgralci(),
-                    lestvica = lestvica())
+                    lestvica = lestvica(),
+                    najkoristnejsiUporabniki = lestivcaUporabnikov())
 
 
 @route('/izberiEkipo')

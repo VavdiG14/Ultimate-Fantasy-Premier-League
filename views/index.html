@@ -114,7 +114,27 @@
                             <i class="pe-7s-cup"></i>
                         </div>
 						<h3>FANTASY</h3>
-                        <p class="description"> Lestvica </p>
+                         <table id="lestvicaU" class="display" cellspacing="0" align="center">
+                  <thead>
+                    <tr>
+                        <th>Uporabnik</th>
+                         <th>Odigrani
+                             <br> krogi</th>
+                         <th>Točke</th>
+                    </tr>
+                  </thead>
+                  </tfoot>
+                  <tbody>
+                  %for uporabnik, tocke, krog in najkoristnejsiUporabniki:
+                  <tr>
+                      <td>{{uporabnik}}</td>
+                      <td>{{krog}}</td>
+                    <td> {{tocke}} </td>
+                  </tr>
+                  %end
+                  </tbody>
+                </table>
+
                     </div>
                 </div>
 				<div class="col-md-4">
@@ -177,6 +197,12 @@
             $('#lestvica').DataTable({
                 searching: false, paging: false,
                  "order": [[ 1, 'desc' ]]
+            })
+    });
+                $(document).ready(function() {
+            $('#lestvicaU').DataTable({
+                searching: false, paging: false,
+                 "order": [[ 2, 'desc' ]]
             })
     });
 </script>
