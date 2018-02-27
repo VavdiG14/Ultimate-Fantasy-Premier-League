@@ -35,7 +35,7 @@ def shraniUporabnika(username, email, team, password):
 
     with sqlite3.connect(baza) as con:
         cur = con.cursor()
-        cur.execute("INSERT INTO Uporabnik VALUES(NULL ,'{0}', '{1}', '{2}', '{3}','None', 0,0, 'None',1)".format(username, hashing(password), email, team))
+        cur.execute("INSERT INTO Uporabnik VALUES(NULL ,'{0}', '{1}', '{2}', '{3}', 0,0, 1)".format(username, hashing(password), email, team))
     return
 
 
