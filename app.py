@@ -60,14 +60,22 @@ def prijava():
         return template('prijava.html', opozorilo = preveriPrijavo(username, password)[1])
 
 
+def vTuple(seznam):
+    nov=[]
+    for i in seznam:
+        x=(i,0)
+        nov.append(x)
+    return nov
 
 @post('/ekipa')
 def sestaviEkipo():
     username = request.get_cookie("racun", secret='some-secret-key1')
     if username:
         igralci = request.forms.getall('gk')
+        ekipa = list(map(int,igralci))
         print(igralci, username)
-        shraniEkipo(list(map(int,igralci)), username)
+        shraniEkipo(ekipa, username)
+        posodobiBazo1(vTuple(ekipa),0,username)
         return redirect('/myTeam')
     else:
         return redirect('/')
@@ -89,12 +97,7 @@ def myTeam():
         ekipa = poisiciEkipo(username)
         ime_ekipe, tocke_skupaj, tocke_krog, krog = poisciUporabnika(username)[0]
         print(krog)
-        if krog == 1:
-            seznamTock = None
-        else:
-            seznamTock = spremeniSeznam(poisciTocke(username, krog))
-        golmani,obramba,zvezna,napadalci = postaviIgralce(ekipa)
-        print(seznamTock)
+        golmani,obramba,zvezna,napadalci,seznamIgralcev = postaviIgralce(username,krog)
         if int(krog) <= 1:
             tekme = None
         else:
@@ -104,8 +107,7 @@ def myTeam():
                     obramba=obramba,
                     sredina=zvezna,
                     napad=napadalci,
-                    seznamIgralcev = spremeniSeznam(ekipa),
-                    seznamTock =seznamTock,
+                    seznamIgralcev = seznamIgralcev ,
                     tocke_krog=tocke_krog,
                     tocke_skupaj=tocke_skupaj,
                     krog=krog,
@@ -117,13 +119,14 @@ def myTeam():
 @post('/krog')
 def izracunajKrog():
     username = request.get_cookie("racun", secret='some-secret-key1')
-    igralci = request.forms.getall('mojih11')
-    izbrani = list(map(int,igralci))
-    print(igralci)
+    rezerve = request.forms.getall('mojih11')
+    print(rezerve)
+    izbraneRezerve = list(map(int,rezerve))
     if username:
         uporab = poisciUporabnika(username)[0]
         krog = uporab[-1]
-        seznamTock,vsota = nastaviTocke(krog,izbrani,username)
+        ekipa = poisiciEkipo(username)
+        seznamTock,vsota = nastaviTocke(krog,izbraneRezerve,ekipa,username)
         posodobiBazo1(seznamTock, krog, username)
         posodobiBazo(vsota,krog,username)
         return redirect('/myTeam')

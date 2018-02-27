@@ -101,25 +101,35 @@ def poisiciEkipo(username):
                     "(SELECT id_uporabnika FROM Uporabnik WHERE uporabnisko_ime ='{0}')".format(username))
     return cur.fetchall()
 
-def postaviIgralce(seznam):
+def postaviIgralce(username, krog):
+    with sqlite3.connect(baza) as con:
+        cur = con.cursor()
+        cur.execute("SELECT id_uporabnika, krog FROM Uporabnik WHERE uporabnisko_ime ='{0}'".format(username))
+        user = cur.fetchall()[0][0]
+        prejsni_krog = krog - 1
+        cur.execute("SELECT Odigran_krog.id_igralca, Odigran_krog.tocke, Igralci.ime, Igralci.klub, Igralci.pozicija FROM Odigran_krog JOIN Igralci ON Odigran_krog.id_igralca=Igralci.id_igralca WHERE Odigran_krog.id_uporabnika = {0} AND Odigran_krog.krog = {1}".format(user, prejsni_krog))
+        seznam = cur.fetchall()
+        print(seznam)
+    seznamIgralcev = []
     gk = []
     def1 = []
     mid = []
     fwd = []
     for i in seznam:
-        igralec = poisciIgralca(i[0])
-        if igralec[0][2] == 'GK':
-            gk.append((igralec[0][0], igralec[0][1], igralec[0][2], "/assets/img/dres_{0}.png".format(igralec[0][1])))
-        elif igralec[0][2] == 'DEF':
-            def1.append((igralec[0][0], igralec[0][1], igralec[0][2], "/assets/img/dres_{0}.png".format(igralec[0][1])))
-        elif igralec[0][2] == 'MID':
-            mid.append((igralec[0][0], igralec[0][1], igralec[0][2], "/assets/img/dres_{0}.png".format(igralec[0][1])))
+        seznamIgralcev.append(i[0])
+        if i[4] == 'GK':
+            gk.append((i[2], i[3], i[1], "/assets/img/dres_{0}.png".format(i[3])))
+        elif i[4] == 'DEF':
+            def1.append((i[1], i[2], i[3], "/assets/img/dres_{0}.png".format(i[3])))
+        elif i[4] == 'MID':
+            mid.append((i[1], i[2], i[3], "/assets/img/dres_{0}.png".format(i[3])))
         else:
-            fwd.append((igralec[0][0], igralec[0][1], igralec[0][2], "/assets/img/dres_{0}.png".format(igralec[0][1])))
-    return (gk,def1,mid,fwd)
+            fwd.append((i[1], i[2], i[3], "/assets/img/dres_{0}.png".format(i[3])))
+
+    return (gk,def1,mid,fwd,seznamIgralcev)
 
 
-def nastaviTocke(krog,izbranih, username):
+def nastaviTocke(krog,rezerve, mojih15, username):
     sez = []
     with sqlite3.connect(baza) as con:
         cur = con.cursor()
@@ -128,11 +138,24 @@ def nastaviTocke(krog,izbranih, username):
         seznamTock = cur.fetchall()
     print(seznamTock)
     print("SPDaj")
-    #premisli
-
-    return (sez, sum(vsota))
+    print(mojih15)
+    vsota = 0
+    sezn = [s[0] for s in seznamTock]
+    for id_igralca1 in mojih15:
+        id_igralca = id_igralca1[0]
+        if int(id_igralca) in rezerve:
+            sez.append((id_igralca, 0))
+        elif int(id_igralca) in sezn:
+            i = sezn.index(id_igralca)
+            sez.append((id_igralca,seznamTock[i][1]))
+            vsota += int(seznamTock[i][1])
+        else:
+            sez.append((id_igralca,0))
+    print(sez)
+    return (sez, vsota)
 
 def posodobiBazo1(seznamTock,krog, username ):
+    """Posodobi tabelo Odigran krog in nastavi krog,id_igralca, id_uporabnika, tocke"""
     with sqlite3.connect(baza) as con:
         cur = con.cursor()
         cur.execute("SELECT id_uporabnika FROM Uporabnik WHERE uporabnisko_ime ='{0}'".format(username))

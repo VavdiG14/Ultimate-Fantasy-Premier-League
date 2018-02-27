@@ -65,6 +65,7 @@
                     Spodaj sta še dve tabeli za pomoč pri izbiranju :)
                 </p>
             </div>
+             <div id ="opozorilo" align="center" style="width:500px;margin-left:500px;"> </div>
             <div class="row">
                 <div class="col-md-2">
                     <div class="info-icon">
@@ -121,11 +122,7 @@
               <br>
             <small>{{i[1]}}</small>
           </h4>
-             %if seznamTock is None:
-                <h3>0</h3>
-            %else:
-                <h3>{{seznamTock[s]}}</h3>
-            %end
+                <h3>{{i[2]}}</h3>
             <div>
                 <input type="checkbox" name="golman" value=1 id={{s}}>
                 <label>Rezerva</label>
@@ -143,11 +140,7 @@
             <br>
             <small>{{j[1]}}</small>
           </h4>
-                %if seznamTock is None:
-                     <h3>0</h3>
-                %else:
-                    <h3>{{seznamTock[s+2]}}</h3>
-                %end
+            <h3>{{j[2]}}</h3>
                 <label><input type="checkbox" value="1" id={{s+2}}>Rezerva</label>
         </div>
                 %end
@@ -159,11 +152,7 @@
             <br>
             <small>{{m[1]}}</small>
           </h4>
-                    %if seznamTock is None:
-                            <h3>0</h3>
-                    %else:
-                        <h3>{{seznamTock[st+7]}}</h3>
-                    %end
+            <h3>{{m[2]}}</h3>
               <label><input type="checkbox" value="1" id={{st+7}}>Rezerva</label>
         </div>
                  %end
@@ -175,11 +164,7 @@
             <br>
             <small>{{n[1]}}</small>
           </h4>
-                    %if seznamTock is None:
-                        <h3>0</h3>
-                    %else:
-                        <h3>{{seznamTock[s1+12]}}</h3>
-                    %end
+            <h3>{{n[2]}}</h3>
               <label><input type="checkbox" value="1" id={{s1+12}}>Rezerva</label>
         </div>
                  %end
@@ -260,28 +245,38 @@
         countChecked();
 
         $("input[type=checkbox]").on("click", countChecked);
-
+        var opozoriloR = '<div class="alert alert-danger"> <strong>Napaka!</strong>  Število rezerv ne ustreza!!</div>';
+        $('#opozorilo').append(opozoriloR);
+        $('#opozorilo').hide();
         $('#naslednjiKrog').click(function () {
             var rez = [];
+            var rezerve = [];
             $("input:checked").each(function () {
                 var id = $(this).attr("id");
                 rez.push(id)
             });
-            var igralci = {{!seznamIgralcev}};
-            for (i = 0; i < rez.length; i++) {
-                igralci[rez[i]] = 0;
+            if (rez.length != 4){
+                 $('#opozorilo').show();
+                 debugger
             }
-            form = $('#form');
-            form.empty();
-            for (i = 0; i < igralci.length; i++) {
-                form.append($('<input>').attr({
-                    type: 'hidden',
-                    name: 'mojih11',
-                    value: igralci[i]
-                }));
-            }
-            form.submit();
-            //Po možnosti dodaj alert, če je dolžina seznama različna od 4
+            else{
+                $('#opozorilo').hide();
+                var igralci = {{!seznamIgralcev}};
+                for (i = 0; i < rez.length; i++) {
+                    rezerve[i] = igralci[rez[i]];
+                }
+                form = $('#form');
+                form.empty();
+                for (i = 0; i < rezerve.length; i++) {
+                    form.append($('<input>').attr({
+                        type: 'hidden',
+                        name: 'mojih11',
+                        value: rezerve[i]
+                    }));
+                }
+
+                form.submit();
+                }
         })
     });
 
